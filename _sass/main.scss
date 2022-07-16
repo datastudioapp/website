@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  .content {
+    flex: 1;
+  }
+
+  figure {
+    flex: 3;
+    div {
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
