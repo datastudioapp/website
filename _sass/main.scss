@@ -65,7 +65,9 @@ body {
     // font-family: "Cerebri Sans";
     font-family: "Averta";
     font-weight: 700;
-    font-size: 2em;
+    font-size: 1.8em;
+
+    color: #212d49;
   }
 }
 
@@ -74,9 +76,15 @@ header.header {
   padding: 0;
   padding-top: 3em;
   padding-bottom: 1em;
-  padding-left: 4em;
+  padding-left: 10em;
 
   background-color: whitesmoke;
+
+  border-bottom: 1px solid black;
+
+  .aside {
+    // float: right;
+  }
 
   .branding {
     a {
@@ -107,12 +115,23 @@ header.header {
 }
 
 section.banner {
+  // background-color: whitesmoke;
+}
+
+section.content-left {
+  padding-left: 10em;
+  padding-right: 0;
   background-color: whitesmoke;
 }
 
+section.content-right {
+  padding-right: 10em;
+  padding-left: 0;
+  background-color: white;
+}
+
 section {
-  padding-left: 4em;
-  padding-right: 4em;
+  box-sizing: border-box;
 
   width: 100%;
   min-height: 80vh;
@@ -127,7 +146,8 @@ section {
     div {
       height: 100%;
       background-position: center;
-      background-size: cover;
+      background-size: contain;
+      background-repeat: no-repeat;
     }
   }
 }
