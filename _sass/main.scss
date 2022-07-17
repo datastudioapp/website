@@ -72,6 +72,9 @@ body {
 header.header {
   margin: 0;
   padding: 0;
+  padding-top: 3em;
+  padding-bottom: 1em;
+  padding-left: 4em;
 
   background-color: whitesmoke;
 
@@ -108,8 +111,12 @@ section.banner {
 }
 
 section {
+  padding-left: 4em;
+  padding-right: 4em;
+
   width: 100%;
   min-height: 80vh;
+
   display: flex;
   .content {
     flex: 1;
