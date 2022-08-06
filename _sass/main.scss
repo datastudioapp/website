@@ -47,23 +47,33 @@
 }
 
 @font-face {
-  font-family: Libre Franklin;
+  font-family: Noto Sans;
+  font-weight: 700;
+  src: 
+    url("/assets/fonts/noto_sans/NotoSans-Bold.ttf") format('truetype'),
+    url("/assets/fonts/noto_sans/NotoSans-Bold.eot") format('embedded-opentype'),
+    url("/assets/fonts/noto_sans/NotoSans-Bold.woff") format('woff'),
+}
+
+@font-face {
+  font-family: Noto Sans;
   font-weight: 400;
   src: 
-    url("/assets/fonts/libre_franklin/LibreFranklin-Regular.ttf") format('truetype'),
+    url("/assets/fonts/noto_sans/NotoSans-Regular.ttf") format('truetype'),
+    url("/assets/fonts/noto_sans/NotoSans-Regular.eot") format('embedded-opentype'),
+    url("/assets/fonts/noto_sans/NotoSans-Regular.woff") format('woff'),
 }
 
 body {
   margin: 0;
   padding: 0;
 
-  font-family: "Libre Franklin";
+  font-family: "Noto Sans";
   font-weight: 400;
   font-size: 1.2em;
 
   h1 {
-    // font-family: "Cerebri Sans";
-    font-family: "Averta";
+    font-family: "Cerebri Sans";
     font-weight: 700;
     font-size: 1.8em;
 
@@ -103,8 +113,7 @@ header.header {
           .brand-text {
             vertical-align: top;
             font-size: 1.5em;
-            // font-family: "Cerebri Sans";
-            font-family: "Averta";
+            font-family: "Cerebri Sans";
             font-weight: 700;
             color: #212d49;
           }
