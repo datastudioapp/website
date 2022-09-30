@@ -7,6 +7,26 @@
     <title>{{ page.title }}</title>
   </head>
   <body>
-    {{ content }}
+    <header class="header">
+      <div class="branding">
+        <a href="/">
+          <div class="brand">
+            <h1>
+              <img src="assets/images/logo.svg"/>
+              <span class="brand-text">opendata.fit</span>
+            </h1>
+          </div>
+        </a>
+      </div>
+      <div class="aside">
+        <span class="aside-text">
+          Part of the <a href="https://imagingtools.org.au/">Australian Characterisation Commons at Scale</a> project
+          funded by the ARDC. Supported by UNSW. 
+        </span>
+      </div>
+    </header>
+    <main>
+      {{ content }}
+    </main>
   </body>
 </html>
