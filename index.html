@@ -22,7 +22,7 @@ tiles:
      description: "Visualise results" }
  - { name: "publish", 
      content: "[42] Jane Smith, opendata.fit: Example Analysis, Sept 2022. Available at <a href=https://opendata.fit/analysis>https://opendata.fit/analysis</a>", 
-     description: "Publish" }
+     description: "Publish your complete workflow" }
 ---
 
 <section class="banner content-left">
@@ -59,47 +59,77 @@ tiles:
 
 <section class="content-right">
   <figure class="opendatafit-embed" data-package="" data-view="">
-    <div style="background-image: url('/assets/images/flow_diagram.png');"
-    <figcaption>A screenshot from SAS analysis algorithm maybe? Or visualisation of a datapackage JSON? Or both?</figcaption>
+    <div style="background-image: url('/assets/images/analysis_screenshot.png');"
+    <figcaption>Screenshot of an analysis interface in opendata.fit</figcaption>
   </figure>
   <div class="content">
-    <h1>Enabling reproducible science, from data collection to publication</h1>
-    <h1>A complete, portable and citable record of your datasets, analysis process and results</h1>
-    <h1>Fully containerised and executable on any machine</h1>
+    <h1>
+      Analysis, simplified
+    </h1>
     <p>
-      Built on FAIR data principles, opendata.fit packages all aspects of your scientific workflow into a single portable JSON format. This file is a complete, portable and citable record of your input datasets, analysis process and results. Fully containerised, your workflow can be executed on any machine.
+      Simple, easy to use web-based user interface optimised for model fitting. Every step of your analysis process is recorded in history.
+    </p>
+    <p>
+      Publish complete workflows by citing a single link.
     </p>
   </div>
 </section>
 
 <section class="content-left">
   <div class="content">
-    <h1>Embeddable widgets for data visualisation</h1>
+    <h1>A complete, portable and citable record of your datasets, analysis process and results</h1>
     <p>
-      VISUALISE YOUR DATA ANYWHERE
+      Built on <a href="https://ardc.edu.au/resource/fair-data/">FAIR data principles</a>, opendata.fit packages all aspects of your scientific workflow into a single portable JSON format. This file is a complete, portable and citable record of your input datasets, analysis process and results.
     </p>
     <p>
-      MANIFEST YOUR BEST DATASET
-    </p>
-    <p>
-      LIVE YOUR BEST LIFE
+      Fully containerised, your packaged workflow can be executed on any machine.
     </p>
   </div>
   <figure class="opendatafit-embed" data-package="" data-view="">
-    <div style="background-image: url('/assets/images/screenshot_graph.jpg');"
-    <figcaption>Widgets and stuff</figcaption>
+    <figcaption>opendata.fit datapackage</figcaption>
+
+    <div id="jsoneditor" style="width: 800px; height: 700px;"></div>
+
+    <script>
+      const editor = new JSONEditor(
+        document.getElementById("jsoneditor"),
+        {
+          mode: "view",
+          search: false,
+          mainMenuBar: false,
+          navigationBar: false
+        }
+      );
+
+      // Loaded from assets/js/example_datapackage.js
+      editor.set(exampleDatapackage);
+      editor.expandAll();
+    </script>
   </figure>
 </section>
 
 <section class="content-right">
   <figure class="opendatafit-embed" data-package="" data-view="">
     <div style="background-image: url('/assets/images/screenshot_graph.jpg');"
-    <figcaption>Editable Vega component</figcaption>
+    <figcaption>Widgets and stuff</figcaption>
   </figure>
+  <div class="content">
+    <h1>Embeddable data visualisations</h1>
+    <p>
+      opendata.fit provides embeddable widgets to visualise your data on any webpage.
+    </p>
+  </div>
+</section>
+
+<section class="content-left">
   <div class="content">
     <h1>Built on open source data standards</h1>
     <p>
-      Built on and extending the open source Frictionless Data standard and Vega Visualisation language. Etc, etc.
+      Built on and extending the open source <a href="https://frictionlessdata.io/">Frictionless Data standard</a> and <a href="https://vega.github.io/vega/">Vega Visualisation language</a>.
     </p>
   </div>
+  <figure class="opendatafit-embed" data-package="" data-view="">
+    <div style="background-image: url('/assets/images/screenshot_graph.jpg');"
+    <figcaption>Editable Vega component</figcaption>
+  </figure>
 </section>

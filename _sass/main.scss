@@ -67,6 +67,7 @@
 
 $brand-color: #212d49;
 $brand-font: "Cerebri Sans";
+$accent-color: #DA5649;
 
 body {
   margin: 0;
@@ -83,6 +84,16 @@ body {
 
     color: $brand-color;
   }
+
+  a:link, a:visited {
+    color: $accent-color;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $brand-color;
+    text-decoration: underline;
+  }
 }
 
 header.header {
@@ -96,8 +107,10 @@ header.header {
 
   border-bottom: 1px solid gray;
 
-  .aside {
-    // float: right;
+  .byline {
+    .attributions {
+      font-size: 0.8em;
+    }
   }
 
   .branding {
