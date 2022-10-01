@@ -4,6 +4,25 @@
 
 layout: home
 title: "opendata.fit | An open science platform"
+tiles: 
+ - { name: "upload", 
+     diagram: "/assets/images/tile_upload.svg", 
+     description: "Upload instrument data" }
+ - { name: "library", 
+     diagram: "/assets/images/tile_library.svg", 
+     description: "Select from a library of open source analysis algorithms" }
+ - { name: "execute", 
+     diagram: "/assets/images/tile_execute.svg", 
+     description: "Perform your analysis on the web" }
+ - { name: "develop", 
+     diagram: "/assets/images/tile_develop.svg", 
+     description: "Write and contribute your own analysis algorithms in Python*" }
+ - { name: "visualise", 
+     diagram: "/assets/images/tile_visualise.svg", 
+     description: "Visualise results" }
+ - { name: "publish", 
+     content: "[42] Jane Smith, opendata.fit: Example Analysis, Sept 2022. Available at <a href=https://opendata.fit/analysis>https://opendata.fit/analysis</a>", 
+     description: "Publish" }
 ---
 
 <section class="banner content-left">
@@ -16,56 +35,24 @@ title: "opendata.fit | An open science platform"
 
   <div class="diagram">
     <div class="tiles">
-      <div class="tile upload">
-        <div class="image-container">
-          <img src="assets/images/tile_upload.svg"/>
-        </div>
-        <div class="copy">
-          Upload instrument data
-        </div>
-      </div>
-      <div class="tile library">
-        <div class="image-container">
-          <img src="assets/images/tile_library.svg"/>
-        </div>
-        <div class="copy">
-          Select from a library of open source analysis algorithms
-        </div>
-      </div>
-      <div class="tile execute">
-        <div class="image-container">
-          <img src="assets/images/tile_execute.svg"/>
-        </div>
-        <div class="copy">
-          Perform your analysis on the web
-        </div>
-      </div>
-      <div class="tile visualise">
-        <div class="image-container">
-          <img src="assets/images/tile_visualise.svg"/>
-        </div>
-        <div class="copy">
-          Visualise results
-        </div>
-      </div>
-      <div class="tile publish">
-        <div class="image-container">
-          <p>
-            [42] Jane Smith, opendata.fit: Example Analysis, Sept 2022. Available at <a href="https://opendata.fit/analysis">https://opendata.fit/analysis</a>
+      {% for tile in page.tiles %}
+        {% if tile.diagram %}
+          <div class="diagram-container {{tile.name}}">
+            <img src={{ tile.diagram }} class="{{ tile.name }} diagram"/>
+          </div>
+        {% else %}
+          <div class="content-container {{tile.name}}">
+            <p class="{{ tile.name }}">
+              {{ tile.content }}
+            </p>
+          </div>
+        {% endif %}
+        <div class="description-container {{tile.name}}">
+          <p class="{{ tile.name }} description">
+            {{ tile.description }}
           </p>
         </div>
-        <div class="copy">
-          Publish
-        </div>
-      </div>
-      <div class="tile develop">
-        <div class="image-container">
-          <img src="assets/images/tile_develop.svg"/>
-        </div>
-        <div class="copy">
-          Write and contribute your own analysis algorithms in Python*
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
