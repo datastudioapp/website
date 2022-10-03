@@ -1,0 +1,12 @@
+
+$brand-color: #212d49;
+
+body#opendatafit {
+  h1 {
+    font-family: font.$typeface-branding;
+    font-weight: 700;
+    font-size: 1.8em;
+
+    color: $brand-color;
+  }
+}

@@ -1,0 +1,43 @@
+header.header {
+  margin: 0;
+  padding: 0;
+  padding-top: 3em;
+  padding-bottom: 1em;
+  padding-left: 10em;
+
+  background-color: whitesmoke;
+
+  border-bottom: 1px solid gray;
+
+  .byline {
+    .attributions {
+      font-size: 0.8em;
+    }
+  }
+
+  .branding {
+    a {
+      text-decoration: none;
+
+      .brand {
+        h1 {
+          margin: 0;
+
+          img {
+            height: 2em;
+            width: 2em;
+            aspect-ratio: auto 50 / 50;
+          }
+
+          .brand-text {
+            vertical-align: top;
+            font-size: 1.5em;
+            font-family: font.$typeface-branding;
+            font-weight: 700;
+            color: #212d49;
+          }
+        }
+      }
+    }
+  }
+}
