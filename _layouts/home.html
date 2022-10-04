@@ -10,9 +10,11 @@
     <title>{{ page.title }}</title>
   </head>
   <body class="opendatafit home-layout" id="opendatafit">
-    {% include header.html %}
-    <main>
-      {{ content }}
-    </main>
+    <div class="site-container">
+      {% include header.html %}
+      <main>
+        {{ content }}
+      </main>
+    </div>
   </body>
 </html>
