@@ -6,9 +6,9 @@ body.home-layout {
 
     grid-gap: 4em 4ch;
 
-    grid-template-columns: [gutter-left] 1fr 
+    grid-template-columns: [gutter-left] 2fr 
                            repeat(12, [col-start] 60px)
-                           [gutter-right] 1fr [end-col];
+                           [gutter-right] 3fr [end-col];
     
     @media (max-width: 1300px) {
       grid-template-columns: [gutter-left] 1ch 
