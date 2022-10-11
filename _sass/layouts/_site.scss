@@ -3,18 +3,17 @@
 
   grid-gap: 3em 0;
 
-  overflow-x: hidden;
+  // overflow-x: hidden;
 
   grid-template-columns: [gutter-left] 1fr
-                         [content-col] 1200px
                          [gutter-right] 1fr [end-col];
 
-  grid-template-rows: [header] 12rem
+  grid-template-rows: [header] auto
                       [content] auto
                       [footer] 20rem [end-row];
 
   header.site-header {
-    grid-area: header / content-col / header/ gutter-right;
+    grid-area: header / gutter-left / header/ end-col;
   }
   
   .site-header-background {
@@ -22,11 +21,12 @@
   }
 
   main.main-container {
-    grid-area: content / content-col / content / gutter-right;
+    // grid-area: content / content-col / content / gutter-right;
+    grid-area: content / gutter-left / content / end-col;
   }
 
   footer.site-footer {
-    grid-area: footer / content-col / footer / gutter-right;
+    grid-area: footer / gutter-left / footer / end-col;
   }
   
   .site-footer-background {

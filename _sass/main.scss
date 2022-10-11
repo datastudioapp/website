@@ -45,12 +45,6 @@ body {
 }
 
 .tiles {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, [row-start] 1fr [main] auto [description]);
-  grid-auto-flow: column;
-  column-gap: 2ch;
-
   .diagram-container, .description-container, .content-container {
     display: flex;
     flex-direction: column;
