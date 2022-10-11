@@ -6,107 +6,119 @@ layout: home
 title: "opendata.fit | An open science platform"
 tiles: 
  - { name: "upload", 
-     diagram: "/assets/images/tile_upload.svg", 
+     diagram: "/assets/images/index/tile_upload.svg", 
      description: "Upload instrument data" }
  - { name: "library", 
-     diagram: "/assets/images/tile_library.svg", 
+     diagram: "/assets/images/index/tile_library.svg", 
      description: "Select from a library of open source analysis algorithms" }
  - { name: "execute", 
-     diagram: "/assets/images/tile_execute.svg", 
+     diagram: "/assets/images/index/tile_execute.svg", 
      description: "Perform your analysis on the web" }
  - { name: "develop", 
-     diagram: "/assets/images/tile_develop.svg", 
+     diagram: "/assets/images/index/tile_develop.svg", 
      description: "Write and contribute your own analysis algorithms in Python*" }
  - { name: "visualise", 
-     diagram: "/assets/images/tile_visualise.svg", 
+     diagram: "/assets/images/index/tile_visualise.svg", 
      description: "Visualise results" }
  - { name: "publish", 
      content: "[42] Jane Smith, opendata.fit: Example Analysis, Sept 2022. Available at <a href=https://opendata.fit/analysis>https://opendata.fit/analysis</a>", 
      description: "Publish your complete workflow" }
 ---
 
-<section class="banner content-left">
-  <div class="content">
-    <h1>A data analysis and publication platform for the web</h1>
-    <p>
-      opendata.fit is a cloud-based web platform and execution engine made for managing scientific analysis workflows and datasets from development to publication, with a focus on model fitting and optimisation.
-    </p>
-  </div>
+<div class="banner-content">
+  <h2>A data analysis and publication platform for the web</h2>
+  <p>
+    opendata.fit is a cloud-based web platform and execution engine made for
+    managing scientific analysis workflows and datasets from development to
+    publication, with a focus on model fitting and optimisation.
+  </p>
+</div>
 
-  <div class="diagram">
-    <div class="tiles">
-      {% for tile in page.tiles %}
-        {% if tile.diagram %}
-          <div class="diagram-container {{tile.name}}">
-            <img src={{ tile.diagram }} class="{{ tile.name }} diagram"/>
-          </div>
-        {% else %}
-          <div class="content-container {{tile.name}}">
-            <p class="{{ tile.name }}">
-              {{ tile.content }}
-            </p>
-          </div>
-        {% endif %}
-        <div class="description-container {{tile.name}}">
-          <p class="{{ tile.name }} description">
-            {{ tile.description }}
+<figure class="banner-diagram">
+  <div class="tiles">
+    {% for tile in page.tiles %}
+      {% if tile.diagram %}
+        <div class="diagram-container {{tile.name}}">
+          <img src={{ tile.diagram }} class="{{ tile.name }} diagram"/>
+        </div>
+      {% else %}
+        <div class="content-container {{tile.name}}">
+          <p class="{{ tile.name }}">
+            {{ tile.content }}
           </p>
         </div>
-      {% endfor %}
-    </div>
+      {% endif %}
+      <div class="description-container {{tile.name}}">
+        <p class="{{ tile.name }} description">
+          {{ tile.description }}
+        </p>
+      </div>
+    {% endfor %}
   </div>
-</section>
+</figure>
 
-<section class="content-right">
-  <figure class="opendatafit-embed" data-package="" data-view="">
-    <div style="background-image: url('/assets/images/analysis_screenshot.png');"
-    <figcaption>Screenshot of an analysis interface in opendata.fit</figcaption>
-  </figure>
-  <div class="content">
-    <h1>
-      Analysis, simplified
-    </h1>
-    <p>
-      Simple, easy to use web-based user interface optimised for model fitting. Every step of your analysis process is recorded in history.
-    </p>
-    <p>
-      Publish complete workflows by citing a single link.
-    </p>
-  </div>
-</section>
 
-<section class="content-left">
-  <div class="content">
-    <h1>A complete, portable and citable record of your datasets, analysis process and results</h1>
-    <p>
-      Built on <a href="https://ardc.edu.au/resource/fair-data/">FAIR data principles</a>, opendata.fit packages all aspects of your scientific workflow into a single portable JSON format. This file is a complete, portable and citable record of your input datasets, analysis process and results.
-    </p>
-    <p>
-      Fully containerised, your packaged workflow can be executed on any machine.
-    </p>
-  </div>
-  <figure class="opendatafit-embed" data-package="" data-view="">
-    <figcaption>opendata.fit datapackage</figcaption>
+<figure class="second-row-diagram">
+  <img src="/assets/images/index/analysis_screenshot.png" />
+  <figcaption>Screenshot of an analysis interface in opendata.fit</figcaption>
+</figure>
+<div class="second-row-content">
+  <h2>
+    Analysis, simplified
+  </h2>
+  <p>
+    Simple, easy-to-use web-based user interface optimised for model fitting.
+    Every step of your analysis process is recorded in history.
+  </p>
+  <p>
+    Publish complete workflows by citing a single link.
+  </p>
+</div>
 
-    <div id="jsoneditor" style="width: 800px; height: 700px;"></div>
 
-    <script>
-      const editor = new JSONEditor(
-        document.getElementById("jsoneditor"),
-        {
-          mode: "view",
-          search: false,
-          mainMenuBar: false,
-          navigationBar: false
-        }
-      );
+<div class="third-row-content">
+  <h2>A complete, portable and citable record of your datasets, analysis process and results</h2>
+  <p>
+    Built on <a href="https://ardc.edu.au/resource/fair-data/">FAIR data
+    principles</a>, opendata.fit packages all aspects of your scientific
+    workflow into a single, portable JSON format. This file is a complete,
+    portable and citable record of your input datasets, analysis process and
+    results.
+  </p>
+  <p>
+    Fully containerised, your packaged workflow can be executed on any machine.
+  </p>
+</div>
 
-      // Loaded from assets/js/example_datapackage.js
-      editor.set(exampleDatapackage);
-      editor.expandAll();
-    </script>
-  </figure>
-</section>
+<figure class="third-row-diagram">
+
+  <div id="jsoneditor" style="width: 100%; height: 90%;"></div>
+  
+  <figcaption>An example opendata.fit datapackage</figcaption>
+
+  <script>
+    const editor = new JSONEditor(
+      document.getElementById("jsoneditor"),
+      {
+        mode: "view",
+        search: false,
+        mainMenuBar: false,
+        navigationBar: false
+      }
+    );
+
+    // Loaded from assets/js/example_datapackage.js
+    editor.set(exampleDatapackage);
+    editor.expandAll();
+  </script>
+</figure>
+
+
+<div class="fair-background">
+</div>
+
+
+{% comment %}
 
 <section class="content-right">
   <figure class="opendatafit-embed" data-package="" data-view="">
@@ -133,3 +145,4 @@ tiles:
     <figcaption>Editable Vega component</figcaption>
   </figure>
 </section>
+{% endcomment %}

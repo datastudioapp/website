@@ -1,43 +1,65 @@
-header.header {
+header.site-header {
   margin: 0;
   padding: 0;
-  padding-top: 3em;
-  padding-bottom: 1em;
-  padding-left: 10em;
 
-  background-color: whitesmoke;
-
-  border-bottom: 1px solid gray;
+  display: flex;
 
   .byline {
-    .attributions {
-      font-size: 0.8em;
+    margin: 0;
+    font-family: font.$typeface-branding;
+  }
+
+  .secondary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    p {
+      margin: 0;
+      margin-bottom: 0.5em;
+      font-size: 0.95em;
+    }
+
+    img.unsw-logo {
+      height: 5rem;
     }
   }
 
   .branding {
-    a {
-      text-decoration: none;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    .brand {
+      padding-bottom: 0.5em; // TODO not a fan
 
-      .brand {
-        h1 {
-          margin: 0;
+      h1 {
+        margin: 0;
 
-          img {
-            height: 2em;
-            width: 2em;
-            aspect-ratio: auto 50 / 50;
-          }
+        img {
+          margin-left: -6px;
+          height: 2em;
+          width: 2em;
+          aspect-ratio: auto 50 / 50;
+        }
 
-          .brand-text {
-            vertical-align: top;
-            font-size: 1.5em;
-            font-family: font.$typeface-branding;
-            font-weight: 700;
-            color: #212d49;
-          }
+        .brand-text {
+          vertical-align: top;
+          font-size: 1.5em;
+          font-family: font.$typeface-branding;
+          font-weight: 700;
+          color: #212d49;
         }
       }
     }
+    a {
+      text-decoration: none;
+
+    }
   }
+}
+
+.site-header-background {
+  z-index: -9999;
+  background-color: whitesmoke;
+  border-bottom: 1px solid #ddd;
 }

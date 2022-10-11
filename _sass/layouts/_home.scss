@@ -1,2 +1,63 @@
 body.home-layout {
+  article.home-content {
+    @include boxmodel.constrain-container;
+
+    display: grid;
+    overflow-x: hidden;
+
+    grid-gap: 4em 4ch;
+
+    grid-template-columns: repeat(12, [col-start] 1fr);
+
+    grid-template-rows: [banner] auto 
+                        [second-row] auto
+                        [third-row] 50vh
+                        [fourth-row] 50vh
+                        [end-row];
+
+    figure {
+      margin: 0;
+      padding: 0;
+    }
+
+    // --- first section ---
+    .banner-content {
+      grid-column: col-start / span 4;
+      grid-row: banner;
+    }
+
+    .banner-diagram {
+      grid-column: col-start 5 / span 8;
+      grid-row: banner;
+    }
+    
+    // --- second section ---
+    .second-row-diagram {
+      grid-column: col-start 2 / span 8;
+      grid-row: second-row;
+      img {
+        width: 100%;
+      }
+    }
+
+    .second-row-content {
+      grid-column: col-start 10 / span 3;
+      grid-row: second-row;
+    }
+    
+    // --- third section ---
+    .third-row-content {
+      grid-column: col-start / span 4;
+      grid-row: third-row;
+    }
+
+    .third-row-diagram {
+      grid-column: col-start 5 / span 7;
+      grid-row: third-row;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+  }
 }

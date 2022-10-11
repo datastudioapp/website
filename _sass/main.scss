@@ -2,6 +2,7 @@
 
 @use "common-styles/config/_font";
 @use "common-styles/config/_colour";
+@use "common-styles/mixins/_boxmodel";
 
 @import "common-styles/_fonts";
 @import "common-styles/_elements";
@@ -10,7 +11,11 @@
 @import "_elements";
 
 @import "layouts/_home";
+@import "layouts/_site";
+
 @import "includes/_header";
+@import "includes/_footer";
+
 @import "pages/_index";
 
 
@@ -28,7 +33,8 @@ body {
 
 
   a:link, a:visited {
-    color: $accent-color;
+    //color: $accent-color;
+    color: $brand-color;
     text-decoration: none;
   }
 
@@ -38,30 +44,12 @@ body {
   }
 }
 
-
-section.banner {
-  // background-color: whitesmoke;
-}
-
-section.content-left {
-  padding-left: 10em;
-  padding-right: 4em;
-  background-color: white;
-  border-bottom: 1px solid gray;
-}
-
-section.content-right {
-  padding-right: 10em;
-  padding-left: 4em;
-  background-color: white;
-  border-bottom: 1px solid gray;
-}
-
 .tiles {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, [row-start] 1fr [main] auto [description]);
   grid-auto-flow: column;
+  column-gap: 2ch;
 
   .diagram-container, .description-container, .content-container {
     display: flex;
@@ -71,7 +59,7 @@ section.content-right {
   }
 
   img.diagram {
-    width: 50%;
+    width: 65%;
   }
 
   .description-container {
