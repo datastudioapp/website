@@ -6,9 +6,11 @@ body.home-layout {
 
     grid-gap: 4em 4ch;
 
-    grid-template-columns: [gutter-left] 2fr 
+    grid-template-columns: [gutter-left] 1fr 
+                           [mid-gutter-left] 1fr
                            repeat(12, [col-start] 60px)
-                           [gutter-right] 3fr [end-col];
+                           [mid-gutter-right] 1fr
+                           [gutter-right] 2fr [end-col];
     
     @media (max-width: 1300px) {
       grid-template-columns: [gutter-left] 1ch 
@@ -42,6 +44,7 @@ body.home-layout {
                         [second-row] auto
                         [third-row] 50vh
                         [fourth-row] 50vh
+                        [fifth-row] minmax(760px, 90vh)
                         [end-row];
 
     figure {
@@ -126,6 +129,30 @@ body.home-layout {
 
     .fair-background {
       grid-area: fourth-row / gutter-left / fourth-row / end-col;
+    }
+
+    .embeddable-widgets-background {
+      grid-area: fifth-row / gutter-left / fifth-row / end-col;
+      background-color: white;
+    }
+
+    .embeddable-widgets-params {
+      grid-column-start: mid-gutter-left;
+      grid-column-end: col-start 5;
+      grid-row: fifth-row;
+      
+      padding-top: 3em;
+    }
+
+    .embeddable-widgets-plot {
+      grid-column-start: col-start 6;
+      grid-column-end: gutter-right;
+      grid-row: fifth-row;
+      padding-top: 3em;
+      padding-bottom: 5em;
+      figure {
+        height: 100%;
+      }
     }
 
   }
