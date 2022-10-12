@@ -4,6 +4,8 @@
 @use "common-styles/config/_colour";
 @use "common-styles/mixins/_boxmodel";
 
+@use "vendor/_include-media";
+
 @import "common-styles/_fonts";
 @import "common-styles/_elements";
 
@@ -17,7 +19,6 @@
 @import "includes/_footer";
 
 @import "pages/_index";
-
 
 
 $accent-color: #DA5649;

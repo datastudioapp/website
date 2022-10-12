@@ -1,4 +1,7 @@
 body.home-layout {
+  $breakpoints: (phone: 320px, tablet: 768px, desktop: 1024px, superwide: 1200px);
+  // $br-superwide: (max-width: 1200px);
+
   header.site-header, 
   article.home-content {
     display: grid;
@@ -11,7 +14,9 @@ body.home-layout {
                            repeat(12, [col-start] 60px)
                            [mid-gutter-right] 1fr
                            [gutter-right] 2fr [end-col];
-    
+    //@include include-media.media(">superwide") {
+    //}
+
     @media (max-width: 1300px) {
       grid-template-columns: [gutter-left] 1ch 
                              repeat(12, [col-start] 1fr)
@@ -58,8 +63,15 @@ body.home-layout {
       @media (min-width: 1000px) and (max-width: 1200px) {
         grid-column: col-start / span 3;
       }
-
       grid-row: banner;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2 {
+        margin: 0;
+      }
     }
 
     .banner-diagram {
@@ -106,6 +118,14 @@ body.home-layout {
         grid-column: col-start 9 / span 4;
       }
       grid-row: second-row;
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2 {
+        margin: 0;
+      }
     }
     
     // --- third section ---
@@ -114,6 +134,14 @@ body.home-layout {
       @media (max-width: 1000px) {
       }
       grid-row: third-row;
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2 {
+        margin: 0;
+      }
     }
 
     .third-row-diagram {
