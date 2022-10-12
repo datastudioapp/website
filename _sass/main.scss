@@ -63,9 +63,10 @@ body {
   }
 
   p.description {
+    margin: 0;
+    margin-bottom: 1em;
     color: $brand-color;
     font-family: font.$typeface-branding;
-    font-weight: bold;
   }
 
 }

@@ -6,14 +6,14 @@ header.site-header {
 
   .byline {
     margin: 0;
-    font-family: font.$typeface-branding;
+    font-family: font.$typeface;
   }
 
   .secondary {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+
     p {
       margin: 0;
       margin-bottom: 0.5em;
@@ -61,6 +61,6 @@ header.site-header {
 
 .site-header-background {
   z-index: -9999;
-  background-color: whitesmoke;
-  border-bottom: 1px solid #ddd;
+  background-color: white;
+  border-bottom: 1px solid #212d49;
 }
