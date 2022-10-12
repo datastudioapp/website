@@ -90,7 +90,7 @@ body.home-layout {
     
     // --- second section ---
     .second-row-diagram {
-      grid-column: col-start 2 / span 8;
+      grid-column: col-start 1 / span 8;
       @media (max-width: 1000px) {
         grid-column: col-start 1 / span 8;
       }
@@ -101,7 +101,7 @@ body.home-layout {
     }
 
     .second-row-content {
-      grid-column: col-start 10 / span 3;
+      grid-column: col-start 9 / span 4;
       @media (max-width: 1000px) {
         grid-column: col-start 9 / span 4;
       }
@@ -117,7 +117,7 @@ body.home-layout {
     }
 
     .third-row-diagram {
-      grid-column: col-start 5 / span 7;
+      grid-column: col-start 5 / span 8;
       @media (max-width: 1000px) {
         grid-column: col-start 5 / span 8;
       }
@@ -141,14 +141,14 @@ body.home-layout {
       grid-column-end: col-start 5;
       grid-row: fifth-row;
       
-      padding-top: 3em;
+      //padding-top: 3em;
     }
 
     .embeddable-widgets-plot {
       grid-column-start: col-start 6;
       grid-column-end: gutter-right;
       grid-row: fifth-row;
-      padding-top: 3em;
+      //padding-top: 3em;
       padding-bottom: 5em;
       figure {
         height: 100%;
