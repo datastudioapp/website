@@ -27,7 +27,8 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: "Noto Sans";
+  // TODO just why
+  font-family: font.$typeface !important;
   font-weight: 400;
   font-size: 1.2em;
 
