@@ -6,6 +6,6 @@
   "author": "James Wilmot <jameswilmot2000@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "opendatafit-common-styles": "git+ssh://git@github.com:opendatafit/opendatafit-common-styles.git"
+    "opendatafit-common-styles": "git+https://github.com/opendatafit/opendatafit-common-styles.git"
   }
 }
