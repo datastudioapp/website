@@ -1,0 +1,22 @@
+body.home-layout {
+  h2 {
+    line-height: 1;
+  }
+
+  counter-reset: figure;
+
+  figure {
+    figcaption {
+      margin: 0.5em 0;
+      &:before {
+        counter-increment: figure;
+        content: "Figure " counter(figure) ": ";
+        font-weight: 700;
+      }
+    }
+  }
+
+  .fair-background {
+    background-color: colour.$banner;
+  }
+}

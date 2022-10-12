@@ -1,0 +1,21 @@
+footer.site-footer {
+  padding-top: 1rem;
+  .logos {
+    display: flex;
+    align-items: center;
+    gap: 3ch;
+    .ardc-logo {
+      height: 5rem;
+    }
+    .ncris-logo {
+      height: 11rem;
+    }
+  }
+}
+
+
+.site-footer-background {
+  z-index: -9999;
+  background-color: whitesmoke;
+  border-top: 1px solid #ddd;
+}

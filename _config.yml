@@ -6,5 +6,9 @@ baseurl: ""
 url: "https://opendata.fit"
 github_username:  opendatafit
 
+sass:
+  load_paths:
+    - "node_modules/opendatafit-common-styles"
+
 plugins:
   - jekyll-seo-tag

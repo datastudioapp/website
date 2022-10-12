@@ -1,0 +1,11 @@
+{
+  "name": "opendata.fit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:opendatafit/opendata.fit.git",
+  "author": "James Wilmot <jameswilmot2000@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "opendatafit-common-styles": "git+ssh://git@github.com:opendatafit/opendatafit-common-styles.git"
+  }
+}
