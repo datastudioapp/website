@@ -23,28 +23,32 @@
 
 $accent-color: #DA5649;
 $brand-color: #212d49;
+$link-color: #628395;
 
-body {
+body#opendatafit {
   margin: 0;
   padding: 0;
 
   // TODO just why
   font-family: font.$typeface !important;
-  font-weight: 400;
-  font-size: 1.2em;
-
+  font-weight: 200 !important;
+  font-size: 18px;
 
   a:link, a:visited {
-    //color: $accent-color;
-    color: $brand-color;
+    color: $link-color;
     text-decoration: none;
   }
 
   a:hover {
-    color: $brand-color;
+    color: colour.$accent;
     text-decoration: underline;
   }
+
+  .jsoneditor {
+    border-color: $link-color;
+  }
 }
+
 
 .tiles {
   .diagram-container, .description-container, .content-container {
