@@ -40,7 +40,7 @@ body.home-layout {
     }
 
     .secondary {
-      grid-column: col-start 11 / span 2;
+      grid-column: col-start 8 / span 5;
       grid-row: content;
     }
   }
@@ -54,9 +54,9 @@ body.home-layout {
       grid-column: col-start / span 6;
       grid-row: content;
     }
-    
+
     .secondary {
-      grid-column: col-start 7 / span 6;
+      grid-column: col-start 10 / span 3;
       grid-row: content;
     }
 

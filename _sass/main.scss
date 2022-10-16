@@ -59,6 +59,17 @@ body#opendatafit {
   .jsoneditor {
     border-color: $link-color;
   }
+
+  #mc_embed_signup {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .brandingLogo {
+    img {
+      display: none;
+    }
+  }
 }
 
 
