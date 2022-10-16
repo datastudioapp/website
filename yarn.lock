@@ -4,4 +4,4 @@
 
 "opendatafit-common-styles@git+https://github.com/opendatafit/opendatafit-common-styles.git":
   version "1.0.0"
-  resolved "git+https://github.com/opendatafit/opendatafit-common-styles.git#0aa635e9b579ade2bce1aa827939aac08d3e6d57"
+  resolved "git+https://github.com/opendatafit/opendatafit-common-styles.git#a79e088b50d6cf68759264b8e5032da1b13a4eaf"
