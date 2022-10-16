@@ -2,9 +2,9 @@
 
 @use "common-styles/config/_font";
 @use "common-styles/config/_colour";
-@use "common-styles/mixins/_boxmodel";
 
-// @use "vendor/_include-media";
+@use "common-styles/mixins/_boxmodel";
+@use "common-styles/mixins/_include-media";
 
 @import "common-styles/_fonts";
 @import "common-styles/_elements";
