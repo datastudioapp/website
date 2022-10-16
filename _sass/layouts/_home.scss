@@ -52,6 +52,11 @@ body.home-layout {
       grid-column: col-start / span 6;
       grid-row: content;
     }
+    
+    .secondary {
+      grid-column: col-start 7 / span 6;
+      grid-row: content;
+    }
 
     p {
       margin: 0;
