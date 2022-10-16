@@ -10,7 +10,7 @@
 
   grid-template-rows: [header] auto
                       [content] auto
-                      [footer] 20rem [end-row];
+                      [footer] auto [end-row];
 
   header.site-header {
     grid-area: header / gutter-left / header/ end-col;

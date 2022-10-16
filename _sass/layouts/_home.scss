@@ -3,7 +3,8 @@ body.home-layout {
   // $br-superwide: (max-width: 1200px);
 
   header.site-header, 
-  article.home-content {
+  article.home-content,
+  footer.site-footer {
     display: grid;
     // overflow-x: hidden;
 
@@ -28,7 +29,7 @@ body.home-layout {
   header.site-header {
     @include boxmodel.constrain-container;
     grid-template-rows: [top-gutter] 1fr
-                        [content] 5rem
+                        [content] 6rem
                         [bottom-gutter] 1fr [end-row];
 
     .branding {
@@ -42,14 +43,29 @@ body.home-layout {
     }
   }
 
+  footer.site-footer {
+    @include boxmodel.constrain-container;
+    grid-template-rows: [top-gutter] 1fr
+                        [content] 15rem
+                        [bottom-gutter] 1fr [end-row];
+    .primary {
+      grid-column: col-start / span 6;
+      grid-row: content;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
   article.home-content {
     @include boxmodel.constrain-container;
 
     grid-template-rows: [banner] auto 
                         [second-row] auto
                         [third-row] 50vh
-                        [fourth-row] 50vh
-                        [fifth-row] minmax(760px, 90vh)
+                        // [fourth-row] 50vh
+                        // [fifth-row] minmax(760px, 90vh)
                         [end-row];
 
     figure {
