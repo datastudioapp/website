@@ -29,8 +29,10 @@ body.home-layout {
   header.site-header {
     @include boxmodel.constrain-container;
     grid-template-rows: [top-gutter] 1fr
-                        [content] 6rem
+                        [content] auto
                         [bottom-gutter] 1fr [end-row];
+
+    grid-gap: 2em 4ch;
 
     .branding {
       grid-column: col-start / span 6;
