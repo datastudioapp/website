@@ -44,6 +44,12 @@ body#opendatafit {
     text-decoration: underline;
   }
 
+  #opendatafit-signup-form {
+    #mc_embed_signup {
+      padding-top: 1px;
+    }
+  }
+
   .brand {
     a:hover {
       text-decoration: none;
