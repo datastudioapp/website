@@ -44,6 +44,12 @@ body#opendatafit {
     text-decoration: underline;
   }
 
+  .brand {
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
   .jsoneditor {
     border-color: $link-color;
   }
