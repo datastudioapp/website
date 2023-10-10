@@ -1,4 +1,14 @@
 @forward 'normalize.css/normalize.css';
 
-@use '@opendatafit/common-styles/common-styles/mixins/_display';
+@forward '@opendatafit/common-styles/common-styles/_fonts.scss';
+@forward '@opendatafit/common-styles/common-styles/_branding.scss';
+@forward '@opendatafit/common-styles/common-styles/_elements.scss';
+@forward '@opendatafit/common-styles/common-styles/_aria.scss';
+
+@use '@opendatafit/common-styles/common-styles/variables/_fonts';
+
+:root {
+  @include fonts.typeface;
+  font-family: var(--typeface);
+}
 
