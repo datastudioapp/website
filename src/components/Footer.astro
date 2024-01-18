@@ -4,12 +4,13 @@ const today = new Date();
 
 <style lang="scss">
   @use "@opendatafit/common-styles/common-styles/variables/fonts";
- 
+
   footer.site-footer {
     .site-source i {
       margin-right: 3px;
     }
-    small.website-attribution, .site-source a {
+    small.website-attribution,
+    .site-source a {
       @include fonts.monospace;
       font-family: var(--monospace-font);
       font-weight: 400;
@@ -19,41 +20,46 @@ const today = new Date();
 
 <footer class="site-footer">
   <div class="project-attribution">
-    <p> 
-      Part of the <a href="https://imagingtools.org.au/">Australian Characterisation Commons at Scale</a> funded by ARDC
-      and NCRIS.
+    <p>
+      Part of the <a href="https://imagingtools.org.au/"
+        >Australian Characterisation Commons at Scale</a
+      > funded by ARDC and NCRIS.
     </p>
     <ul class="logos">
       <li>
         <a href="https://www.rna.unsw.edu.au">
-          <img class="rnai-logo" src="assets/images/logos/unsw-rnai.png">
+          <img class="rnai-logo" src="assets/images/logos/unsw-rnai.png" />
         </a>
       </li>
       <li>
         <a href="https://ardc.edu.au/">
-          <img class="ardc-logo" src="assets/images/logos/ardc.svg">
+          <img class="ardc-logo" src="assets/images/logos/ardc.svg" />
         </a>
       </li>
       <li>
         <a href="https://www.education.gov.au/ncris">
-          <img class="ncris-logo" src="assets/images/logos/ncris.png">
+          <img class="ncris-logo" src="assets/images/logos/ncris.png" />
         </a>
       </li>
       <li>
         <a href="https://www.unsw.edu.au">
-          <img class="unsw-logo" src="assets/images/logos/unsw.svg">
+          <img class="unsw-logo" src="assets/images/logos/unsw.svg" />
         </a>
       </li>
     </ul>
   </div>
   <div class="footer-base">
     <span class="site-source">
-      <i class="fab fa-github"></i> 
-      <a href="https://github.com/opendatafit/opendata.fit">opendatafit/opendata.fit</a>
+      <i class="fab fa-github"></i>
+      <a href="https://github.com/opendatafit/opendata.fit"
+        >opendatafit/opendata.fit</a
+      >
     </span>
 
     <small class="website-attribution">
-      > site design: <a href="https://github.com/echus">@echus</a>, <a href="https://github.com/JamesWilmot">@jameswilmot</a>
+      > site design: <a href="https://github.com/echus">@echus</a>, <a
+        href="https://github.com/JamesWilmot">@jameswilmot</a
+      >
     </small>
   </div>
 </footer>
