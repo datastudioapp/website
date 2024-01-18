@@ -10,5 +10,6 @@
 :root {
   @include fonts.typeface;
   font-family: var(--typeface);
+  font-weight: 300;
 }
 
