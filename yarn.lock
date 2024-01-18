@@ -610,7 +610,7 @@
 
 "@opendatafit/common-styles@git+ssh://git@github.com:opendatafit/common-styles.git#3-refactor-sass-variables-into-css-variables":
   version "1.0.0"
-  resolved "git+ssh://git@github.com:opendatafit/common-styles.git#0de8b0441d1097ced6a7d4c0a85202128371f6e1"
+  resolved "git+ssh://git@github.com:opendatafit/common-styles.git#66df483ae5728a5ea7b692b2275b9e2463aa358d"
 
 "@types/acorn@^4.0.0":
   version "4.0.6"
