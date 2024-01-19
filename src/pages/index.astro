@@ -27,24 +27,40 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
       "left-gutter main right-gutter"
       "left-gutter foot right-gutter";
 
-    .site-header {
-      grid-area: head;
-    }
-
     .site-header-background {
       grid-area: header / gutter-left / header / end-col;
       background-color: whitesmoke;
       border-bottom: 1px solid #ddd;
     }
 
-    .site-footer-background {
-      grid-area: footer / gutter-left / footer / end-col;
-      background-color: whitesmoke;
-      border-top: 1px solid #ddd;
+    .site-header {
+      grid-area: head;
     }
 
     main {
       grid-area: main;
+
+      section.marketing-tiles {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        img {
+          margin: auto;
+          display: block;
+          width: 30%;
+        }
+
+        h2,
+        p {
+          text-align: center;
+        }
+      }
+    }
+
+    .site-footer-background {
+      grid-area: footer / gutter-left / footer / end-col;
+      background-color: whitesmoke;
+      border-top: 1px solid #ddd;
     }
 
     .site-footer {
@@ -65,6 +81,7 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
     <BaseHead title={title} description={SITE_DESCRIPTION} />
     <link href="/assets/fonts/FontAwesome/css/all.css" rel="stylesheet" />
   </head>
+
   <body class="opendatafit">
     <div class="layout-container">
       <div class="site-header-background"></div>
@@ -73,54 +90,43 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
       </div>
 
       <main>
-        <h1>🧑‍🚀 Hello, Astronaut!</h1>
-        <p>
-          Welcome to the official <a href="https://astro.build/">Astro</a> blog starter
-          template. This template serves as a lightweight, minimally-styled starting
-          point for anyone looking to build a personal website, blog, or portfolio
-          with Astro.
-        </p>
-        <p>
-          This template comes with a few integrations already configured in your
-          <code>astro.config.mjs</code> file. You can customize your setup with
-          <a href="https://astro.build/integrations">Astro Integrations</a> to add
-          tools like Tailwind, React, or Vue to your project.
-        </p>
-        <p>Here are a few ideas on how to get started with the template:</p>
-        <ul>
-          <li>Edit this page in <code>src/pages/index.astro</code></li>
-          <li>
-            Edit the site header items in <code
-              >src/components/Header.astro</code
-            >
-          </li>
-          <li>
-            Add your name to the footer in <code
-              >src/components/Footer.astro</code
-            >
-          </li>
-          <li>
-            Check out the included blog posts in <code>src/pages/blog/</code>
-          </li>
-          <li>
-            Customize the blog post page layout in <code
-              >src/layouts/BlogPost.astro</code
-            >
-          </li>
-        </ul>
-        <p>
-          Have fun! If you get stuck, remember to <a
-            href="https://docs.astro.build/"
-            >read the docs
-          </a> or <a href="https://astro.build/chat">join us on Discord</a> to ask
-          questions.
-        </p>
-        <p>
-          Looking for a blog template with a bit more personality? Check out <a
-            href="https://github.com/Charca/astro-blog-template"
-            >astro-blog-template
-          </a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-        </p>
+        <section class="marketing-tiles">
+          <div>
+            <img src="assets/images/index/tile_upload.svg" />
+            <h2>Upload</h2>
+            <p>Upload experiment data</p>
+          </div>
+          <div>
+            <img src="assets/images/index/tile_execute.svg" />
+            <h2>Run</h2>
+            <p>Run analysis online or locally</p>
+          </div>
+          <div>
+            <img src="assets/images/index/tile_visualise.svg" />
+            <h2>Visualise</h2>
+            <p>Visualise results</p>
+          </div>
+          <div>
+            <img src="assets/images/index/tile_library.svg" />
+            <h2>Explore</h2>
+            <p>Select from a library of user-contributed analysis algorithms</p>
+          </div>
+          <div>
+            <img src="assets/images/index/tile_develop.svg" />
+            <h2>Contribute</h2>
+            <p>Write and contribute analysis algorithms</p>
+          </div>
+          <div>
+            <p>
+              [42] Jane Smith, opendata.fit: Example Analysis, Sept 2022.
+              Available at <a href="https://app.opendata.fit/s/cfdf85"
+                >https://app.opendata.fit/s/cfdf85</a
+              >
+            </p>
+            <h2>Publish</h2>
+            <p>Publish reproducible workflows by citing a single link</p>
+          </div>
+        </section>
       </main>
 
       <div class="site-footer-background"></div>
