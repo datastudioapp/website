@@ -1,4 +1,4 @@
-import { defineCollection, z, reference } from 'astro:content';
+import { defineCollection, z, reference } from "astro:content";
 
 const blog = defineCollection({
   // Type-check frontmatter using a schema
@@ -9,7 +9,7 @@ const blog = defineCollection({
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     heroImage: z.string().optional(),
-    authors: z.array(reference('people')).optional(),
+    authors: z.array(reference("people")).optional(),
   }),
 });
 

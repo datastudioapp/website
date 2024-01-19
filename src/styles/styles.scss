@@ -1,10 +1,10 @@
-@forward 'normalize.css/normalize.css';
+@forward "normalize.css/normalize.css";
 
 @forward '@opendatafit/common-styles/common-styles/_branding.scss';
 @forward '@opendatafit/common-styles/common-styles/_elements.scss';
 @forward '@opendatafit/common-styles/common-styles/_aria.scss';
 
-@use '@opendatafit/common-styles/common-styles/variables/_fonts';
+@use "@opendatafit/common-styles/common-styles/variables/_fonts";
 
 // Bold
 @font-face {
@@ -71,4 +71,3 @@
   font-family: "Inter";
   // font-weight: 300;
 }
-
