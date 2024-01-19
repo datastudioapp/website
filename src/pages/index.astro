@@ -33,7 +33,7 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
 
     .site-header-background {
       grid-area: header / gutter-left / header / end-col;
-      background-color: whitesmoke;
+      // background-color: whitesmoke;
       border-bottom: 1px solid #ddd;
     }
 
@@ -82,6 +82,16 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
         font-family: "Inconsolata" !important;
       }
     }
+
+    .title-branding {
+      font-family: "Inter";
+      font-variant: discretionary-ligatures;
+      font-variation-settings:
+        "opsz" 32,
+        "wght" 370;
+      font-size: 1.5em;
+      color: #212d49;
+    }
   }
 </style>
 
@@ -99,6 +109,12 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
       </div>
 
       <main>
+        <section>
+          <p class="byline">
+            <h1 class="title-branding">opendata.fit</h1>
+            Declarative data analysis for reproducibility and publication.
+          </p>
+        </section>
         <section class="marketing-tiles">
           <div>
             <img src="assets/images/index/tile_upload.svg" />
