@@ -14,16 +14,20 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
 
     grid-template-rows:
       [header] auto
+      [header-gutter] 2rem
       [content] auto
       [footer] auto [end-row];
 
     grid-template-columns:
       [gutter-left] 1fr
-      [content-col] 80ch
+      [content-col] 120ch
       [gutter-right] 1fr [end-col];
 
+    // TODO reconsider row gutter implementation
+    // or just research how to do this in non shit manner
     grid-template-areas:
       "left-gutter head right-gutter"
+      "left-gutter header-gutter right-gutter"
       "left-gutter main right-gutter"
       "left-gutter foot right-gutter";
 
@@ -40,6 +44,11 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
     main {
       grid-area: main;
 
+      // TODO might do this with flex column, I dunno
+      section:not(:first-child) {
+        margin-top: 2rem;
+      }
+
       section.marketing-tiles {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -47,7 +56,7 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
         img {
           margin: auto;
           display: block;
-          width: 30%;
+          width: 20%;
         }
 
         h2,
