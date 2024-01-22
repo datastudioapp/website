@@ -10,14 +10,16 @@ const posts = (await getCollection("blog")).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
 );
 ---
+<style lang="scss">
 
+</style>
 <!doctype html>
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <style></style>
   </head>
-  <body>
+
+  <body class="opendatafit">
     <Header />
     <main>
       <section>
