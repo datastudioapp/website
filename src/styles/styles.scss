@@ -73,15 +73,6 @@
       format("truetype-variations");
 }
 
-.brand-text {
-  font-family: "Inter" !important;
-  font-variant: discretionary-ligatures;
-  font-variation-settings:
-    "opsz" 32,
-    "wght" 370;
-  font-size: 1.2em !important;
-}
-
 :root {
   // @include fonts.typeface;
   // font-family: var(--typeface);
