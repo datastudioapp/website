@@ -38,12 +38,18 @@ import { SITE_TITLE } from "../consts";
         align-items: center;
       }
     }
+    a {
+      text-decoration: none;
+      font-weight: 400;
+    }
   }
 </style>
 
 <header class="site-header">
   <div class="branding">
-    <img class="opendatafit-logo" src="/assets/images/logos/opendatafit.svg" />
+    <a href="/" title="Home">
+      <img class="opendatafit-logo" src="/assets/images/logos/opendatafit.svg" />
+    </a>
   </div>
   <nav>
     <div class="internal-links">
