@@ -5,7 +5,24 @@ const today = new Date();
 <style lang="scss">
   @use "@opendatafit/common-styles/common-styles/variables/fonts";
 
+  strong {
+    font-variation-settings: "opsz" 14,"wght" 550;
+  }
+
   footer.site-footer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    .footer-base {
+      margin-top: 1rem;
+      display: flex;
+      .website-attribution {
+        margin-left: auto;
+      }
+    }
+
+    .project-attribution {
+      margin: 2em 0;
+    }
     .site-source i {
       margin-right: 3px;
     }
@@ -15,40 +32,35 @@ const today = new Date();
       font-family: var(--monospace-font);
       font-weight: 400;
     }
+    .supporters {
+      display: flex;
+      margin-top: 1em;
+      margin-bottom: 2em;
+      height: 10em;
+      gap: 3ch;
+      img {
+        height: 100%;
+      }
+    }
   }
 </style>
 
 <footer class="site-footer">
   <div class="project-attribution">
+    <strong>Proudly supported by</strong>
+    <div class="supporters">
+      <a href="https://www.rna.unsw.edu.au">
+        <img class="rnai-logo" src="assets/images/logos/unsw-rnai.png" />
+      </a>
+      <a href="https://www.unsw.edu.au">
+        <img class="unsw-logo" src="assets/images/logos/unsw.svg" />
+      </a>
+    </div>
     <p>
       Part of the <a href="https://imagingtools.org.au/"
         >Australian Characterisation Commons at Scale</a
       > funded by ARDC and NCRIS.
     </p>
-    <!--
-    <ul class="logos">
-      <li>
-        <a href="https://www.rna.unsw.edu.au">
-          <img class="rnai-logo" src="assets/images/logos/unsw-rnai.png" />
-        </a>
-      </li>
-      <li>
-        <a href="https://ardc.edu.au/">
-          <img class="ardc-logo" src="assets/images/logos/ardc.svg" />
-        </a>
-      </li>
-      <li>
-        <a href="https://www.education.gov.au/ncris">
-          <img class="ncris-logo" src="assets/images/logos/ncris.png" />
-        </a>
-      </li>
-      <li>
-        <a href="https://www.unsw.edu.au">
-          <img class="unsw-logo" src="assets/images/logos/unsw.svg" />
-        </a>
-      </li>
-    </ul>
-    -->
   </div>
   <div class="footer-base">
     <span class="site-source">
