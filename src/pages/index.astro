@@ -61,7 +61,6 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
         [gutter-right] 2ch[end-col];
     }
 
-
     // TODO reconsider row gutter implementation
     // or just research how to do this in non shit manner
     grid-template-areas:
@@ -187,9 +186,8 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
             margin-top: 0.5em;
             font-size: 1.15em;
           }
-
-          }
         }
+      }
     }
 
     .site-footer-background {
@@ -228,7 +226,6 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
       }
     }
 
-
     .title-byline {
       font-family: "Inter";
       font-variation-settings:
@@ -256,7 +253,10 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
       <main>
         <section class="introduction">
           <div class="opendatafit-branding">
-            <img class="opendatafit-logo" src="/assets/images/logos/opendatafit.svg" />
+            <img
+              class="opendatafit-logo"
+              src="/assets/images/logos/opendatafit.svg"
+            />
             <h1 class="title-branding">opendata.fit</h1>
           </div>
           <span class="title-byline">
@@ -273,16 +273,16 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
               and publish complete workflows as citable entities. Enabling
               reproducibility and open science.
             </p>
-            <p>
-              Understand the opendata.fit platform:
-            </p>
+            <p>Understand the opendata.fit platform:</p>
           </div>
 
           <div class="link-tiles">
+            <!--
             <a href="https://opendata.fit">
               <h2>About&nbsp;→</h2>
               <p>What is opendata.fit?</p>
             </a>
+            -->
             <a href="https://opendata.fit">
               <h2>Documentation&nbsp;→</h2>
               <p>Learn how to use opendata.fit</p>
@@ -291,10 +291,12 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
               <h2>Community&nbsp;→</h2>
               <p>A support forum for opendata.fit users</p>
             </a>
+            <!--
             <a href="https://opendata.fit">
               <h2>Blog&nbsp;→</h2>
               <p>Read the opendata.fit blog</p>
             </a>
+            -->
           </div>
         </section>
 
@@ -333,7 +335,9 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
             <div>
               <img src="assets/images/index/tile_library.svg" />
               <h2>Explore</h2>
-              <p>Select from a library of user-contributed analysis algorithms</p>
+              <p>
+                Select from a library of user-contributed analysis algorithms
+              </p>
             </div>
             <div>
               <img src="assets/images/index/tile_develop.svg" />
