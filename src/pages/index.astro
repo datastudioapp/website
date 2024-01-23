@@ -89,7 +89,7 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
       padding-bottom: 10vh;
 
       section.introduction {
-        min-height: 60vh;
+        min-height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -154,12 +154,16 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
         container-type: inline-size;
         display: flex;
         flex-direction: column;
-        min-height: 50vh;
+        min-height: 85vh;
         justify-content: center;
+        h2 {
+          text-align: center;
+        }
         .marketing-tiles-grid {
           display: grid;
           grid-row-gap: 3em;
           border: 1px dashed #ddd;
+          border-radius: 0.4em;
           padding: 3em;
           height: auto;
           grid-template-columns: repeat(3, minmax(0, 1fr));

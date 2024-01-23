@@ -22,6 +22,7 @@ const today = new Date();
 
     .project-attribution {
       margin: 2em 0;
+      text-align: center;
     }
     .site-source i {
       margin-right: 3px;
@@ -34,12 +35,16 @@ const today = new Date();
     }
     .supporters {
       display: flex;
+      justify-content: center;
       margin-top: 1em;
       margin-bottom: 2em;
-      height: 10em;
+      height: 7em;
       gap: 3ch;
       img {
         height: 100%;
+        &.unsw-logo {
+          height: 80%;
+        }
       }
     }
   }
