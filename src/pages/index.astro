@@ -94,8 +94,13 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
         justify-content: center;
         container-type: inline-size;
 
+        .intro-box {
+          width: 80ch;
+        }
+
         .link-tiles {
           display: grid;
+          margin-top: 2em;
           grid-template-columns: repeat(4, minmax(0, 1fr));
           @container (max-width: 1120px) {
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -130,6 +135,11 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
         display: grid;
         grid-template-columns: 35ch auto;
         column-gap: 8ch;
+
+        .text-container {
+          display: flex;
+          align-items: center;
+        }
 
         .screenshot-container {
           img {
@@ -299,28 +309,30 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
         </section>
 
         <section class="app-screenshot">
-          <div>
-            <h2>Flexibility built in</h2>
-            <p>
-              Manage datasets and run analysis workflows in the cloud using our
-              web-based interface, or execute workflows locally with our CLI
-              tools and upload the results.
-            </p>
+          <div class="text-container">
+            <div>
+              <h2>Flexibility built in</h2>
+              <p>
+                Manage datasets and run analysis workflows in the cloud using our
+                web-based interface, or execute workflows locally with our CLI
+                tools and upload the results.
+              </p>
 
-            <p>Code and run your own Python-based algorithms.</p>
+              <p>Code and run your own Python-based algorithms.</p>
 
-            <p>
-              Build a user-friendly web interface for your code with our UI
-              components:
-              <ul>
-                <li>Plotly and Vega graphing components</li>
-                <li>Handsontable tabular data display components</li>
-                <li>Parameter input/output display component</li>
-                <li>File upload component</li>
-              </ul>
-            </p>
+              <p>
+                Build a user-friendly web interface for your code with our UI
+                components:
+                <ul>
+                  <li>Plotly and Vega graphing components</li>
+                  <li>Handsontable tabular data display components</li>
+                  <li>Parameter input/output display component</li>
+                  <li>File upload component</li>
+                </ul>
+              </p>
 
-            <p>Publish complete workflows as citable entities.</p>
+              <p>Publish complete workflows as citable entities.</p>
+            </div>
           </div>
           <div class="screenshot-container">
             <img src="assets/images/index/analysis_screenshot.png" />
