@@ -1,0 +1,84 @@
+---
+const today = new Date();
+---
+
+<style lang="scss">
+  @use "@opendatafit/common-styles/common-styles/variables/fonts";
+
+  strong {
+    font-variation-settings: "opsz" 14,"wght" 550;
+  }
+
+  footer.site-footer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    .footer-base {
+      margin-top: 1rem;
+      display: flex;
+      .website-attribution {
+        margin-left: auto;
+      }
+    }
+
+    .project-attribution {
+      margin: 2em 0;
+      text-align: center;
+    }
+    .site-source i {
+      margin-right: 3px;
+    }
+    small.website-attribution,
+    .site-source a {
+      @include fonts.monospace;
+      font-family: var(--monospace-font);
+      font-weight: 400;
+    }
+    .supporters {
+      display: flex;
+      justify-content: center;
+      margin-top: 1em;
+      margin-bottom: 2em;
+      height: 5em;
+      gap: 3ch;
+      img {
+        height: 100%;
+        &.unsw-logo {
+          height: 80%;
+        }
+      }
+    }
+  }
+</style>
+
+<footer class="site-footer">
+  <div class="project-attribution">
+    <strong>Proudly supported by</strong>
+    <div class="supporters">
+      <a href="https://www.rna.unsw.edu.au">
+        <img class="rnai-logo" src="assets/images/logos/unsw-rnai.png" />
+      </a>
+      <a href="https://www.unsw.edu.au">
+        <img class="unsw-logo" src="assets/images/logos/unsw.svg" />
+      </a>
+    </div>
+    <p>
+      Part of the <a href="https://imagingtools.org.au/"
+        >Australian Characterisation Commons at Scale</a
+      > funded by ARDC and NCRIS.
+    </p>
+  </div>
+  <div class="footer-base">
+    <span class="site-source">
+      <i class="fab fa-github"></i>
+      <a href="https://github.com/opendatafit/opendata.fit"
+        >opendatafit/opendata.fit</a
+      >
+    </span>
+
+    <small class="website-attribution">
+      > site design: <a href="https://github.com/echus">@echus</a>, <a
+        href="https://github.com/JamesWilmot">@jameswilmot</a
+      >
+    </small>
+  </div>
+</footer>

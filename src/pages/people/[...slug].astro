@@ -1,0 +1,21 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import Person from "../../layouts/Person.astro";
+
+export async function getStaticPaths() {
+  const people = await getCollection("people");
+  console.log("people", people);
+  return people.map((person) => ({
+    params: { slug: person.slug },
+    props: person,
+  }));
+}
+type Props = CollectionEntry<"people">;
+
+const person = Astro.props;
+const { Content } = await person.render();
+---
+
+<Person {...person.data}>
+  <Content />
+</Person>

@@ -1,11 +1,28 @@
 {
   "name": "opendata.fit",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:opendatafit/opendata.fit.git",
-  "author": "James Wilmot <jameswilmot2000@gmail.com>",
-  "license": "MIT",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "prepare": "husky install"
+  },
   "dependencies": {
-    "opendatafit-common-styles": "git+https://github.com/opendatafit/opendatafit-common-styles.git"
+    "@astrojs/mdx": "^1.1.0",
+    "@astrojs/rss": "^3.0.0",
+    "@astrojs/sitemap": "^3.0.0",
+    "@opendatafit/common-styles": "git+ssh://git@github.com:opendatafit/common-styles.git#3-refactor-sass-variables-into-css-variables",
+    "astro": "^3.2.2",
+    "normalize.css": "^8.0.1",
+    "sass": "^1.68.0"
+  },
+  "devDependencies": {
+    "husky": "^8.0.0",
+    "prettier": "^3.2.4",
+    "prettier-plugin-astro": "^0.12.3",
+    "pretty-quick": "^4.0.0"
   }
 }

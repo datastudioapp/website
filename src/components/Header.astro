@@ -1,0 +1,66 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
+---
+
+<style lang="scss">
+  @use "@opendatafit/common-styles/common-styles/mixins/display";
+  @use "@opendatafit/common-styles/common-styles/variables/fonts";
+
+  header.site-header {
+    // color: colour.$banner;
+    display: grid;
+
+    grid-template-rows: [content] auto [end-row];
+
+    grid-template-columns:
+      [logo-col] 50px
+      [space-left] 1fr
+      [nav-col] auto
+      [space-right] 1fr
+      [logo-col-offset] 50px [end-col];
+
+    grid-template-areas: "logo left-space navigation right-space logo-offset";
+
+    .branding {
+      grid-area: logo;
+      img {
+        aspect-ratio: auto 50 / 50;
+      }
+    }
+
+    nav {
+      grid-area: navigation;
+      .internal-links {
+        display: flex;
+        height: 100%;
+        gap: 2ch;
+        align-items: center;
+      }
+    }
+    a {
+      text-decoration: none;
+      font-weight: 400;
+    }
+  }
+</style>
+
+<header class="site-header">
+  <div class="branding">
+    <a href="/" title="Home">
+      <img
+        class="opendatafit-logo"
+        src="/assets/images/logos/opendatafit.svg"
+      />
+    </a>
+  </div>
+  <nav>
+    <div class="internal-links">
+      <HeaderLink href="https://community.opendata.fit">Community</HeaderLink>
+      <HeaderLink href="https://docs.opendata.fit">Documentation</HeaderLink>
+      <!-- <HeaderLink href="/richardstallmanisgod">Open source</HeaderLink> -->
+      <!-- <HeaderLink href="/blog">Blog</HeaderLink> -->
+      <!-- <HeaderLink href="/about">About</HeaderLink> -->
+    </div>
+  </nav>
+</header>

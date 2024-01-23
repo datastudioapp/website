@@ -1,0 +1,81 @@
+@forward "normalize.css/normalize.css";
+
+@forward "@opendatafit/common-styles/common-styles/_branding.scss";
+@forward "@opendatafit/common-styles/common-styles/_elements.scss";
+@forward "@opendatafit/common-styles/common-styles/_aria.scss";
+
+@use "@opendatafit/common-styles/common-styles/variables/_fonts";
+
+// Bold
+@font-face {
+  font-family: Cerebri Sans;
+  font-weight: 700;
+  src:
+    url("/assets/fonts/CerebriSans/CerebriSans-Bold.ttf") format("truetype"),
+    url("/assets/fonts/CerebriSans/CerebriSans-Bold.eot")
+      format("embedded-opentype"),
+    url("/assets/fonts/CerebriSans/CerebriSans-Bold.woff") format("woff"),
+    url("/assets/fonts/CerebriSans/CerebriSans-Bold.svg") format("svg");
+}
+
+// Semi bold
+@font-face {
+  font-family: Cerebri Sans;
+  font-weight: 600;
+  src:
+    url("/assets/fonts/CerebriSans/CerebriSans-SemiBold.ttf") format("truetype"),
+    url("/assets/fonts/CerebriSans/CerebriSans-SemiBold.eot")
+      format("embedded-opentype"),
+    url("/assets/fonts/CerebriSans/CerebriSans-SemiBold.woff") format("woff"),
+    url("/assets/fonts/CerebriSans/CerebriSans-SemiBold.svg") format("svg");
+}
+
+// Regular
+@font-face {
+  font-family: Cerebri Sans;
+  font-weight: 400;
+  src:
+    url("/assets/fonts/CerebriSans/CerebriSans-Regular.ttf") format("truetype"),
+    url("/assets/fonts/CerebriSans/CerebriSans-Regular.eot")
+      format("embedded-opentype"),
+    url("/assets/fonts/CerebriSans/CerebriSans-Regular.woff") format("woff"),
+    url("/assets/fonts/CerebriSans/CerebriSans-Regular.svg") format("svg");
+}
+
+@font-face {
+  font-family: Inconsolata;
+  src:
+    url("/assets/fonts/Inconsolata/Inconsolata-VariableFont_wdth,wght.ttf")
+      format("truetype supports variations"),
+    url("/assets/fonts/Inconsolata/Inconsolata-VariableFont_wdth,wght.ttf")
+      format("truetype-variations");
+  font-weight: 100 1000;
+}
+
+@font-face {
+  font-family: Inter;
+  font-weight: 100 1000;
+  font-style: normal;
+  src:
+    url("/assets/fonts/Inter/InterVariable.ttf")
+      format("truetype supports variations"),
+    url("/assets/fonts/Inter/InterVariable.ttf") format("truetype-variations");
+}
+
+@font-face {
+  font-family: Inter;
+  font-weight: 100 1000;
+  font-style: italic;
+  src:
+    url("/assets/fonts/Inter/InterVariable-Italic.ttf")
+      format("truetype supports variations"),
+    url("/assets/fonts/Inter/InterVariable-Italic.ttf")
+      format("truetype-variations");
+}
+
+:root {
+  // @include fonts.typeface;
+  // font-family: var(--typeface);
+  font-family: "Inter";
+  // font-weight: 300;
+}
