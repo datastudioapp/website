@@ -10,13 +10,25 @@ const today = new Date();
   }
 
   footer.site-footer {
+    container-type: inline-size;
     padding-top: 1rem;
     padding-bottom: 1rem;
+
     .footer-base {
       margin-top: 1rem;
       display: flex;
+
       .website-attribution {
         margin-left: auto;
+      }
+
+      @container (max-width: 600px) {
+        display: block;
+        text-align: center;
+        .website-attribution {
+          margin: 1em 0;
+          display: block;
+        }
       }
     }
 
@@ -33,6 +45,8 @@ const today = new Date();
       font-family: var(--monospace-font);
       font-weight: 400;
     }
+
+
     .supporters {
       display: flex;
       justify-content: center;

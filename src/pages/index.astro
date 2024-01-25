@@ -11,6 +11,8 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
   @use "@opendatafit/common-styles/common-styles/variables/fonts";
   @use "@opendatafit/common-styles/common-styles/mixins/boxmodel";
 
+  @use "../styles/mixins/breakpoints";
+
   @mixin mobile-bp {
     @media (max-width: 700px) {
       @content;
@@ -107,9 +109,6 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
             grid-template-columns: repeat(2, minmax(0, 1fr));
           }
 
-          @container (max-width: 600px) {
-            grid-template-columns: repeat(1, minmax(0, 1fr));
-          }
           column-gap: 2ch;
           row-gap: 2.25em;
 
@@ -131,6 +130,17 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
             &:hover {
               color: firebrick;
               border: 1px solid firebrick;
+            }
+          }
+
+          @container (max-width: 600px) {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            row-gap: 1em;
+            h2 {
+              font-size: 1.25em;
+            }
+            a {
+              padding: 0 1ch;
             }
           }
         }
@@ -240,15 +250,15 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
     .opendatafit-branding {
       display: flex;
       align-items: center;
-      height: 4em;
       margin: 1em 0;
 
       img {
         margin-right: 1ch;
-        height: 100%;
+        height: 4em;
       }
 
       .title-branding {
+        margin: 0;
         font-family: "Inter";
         font-variant: discretionary-ligatures;
         font-variation-settings:
@@ -266,6 +276,18 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
         "wght" 550;
       font-size: 1.5em;
       display: block;
+    }
+
+    @media (max-width: 445px) {
+      .opendatafit-branding {
+        font-size: 0.8em;
+        margin: 0;
+        margin-bottom: 1em;
+      }
+
+      .title-byline {
+        font-size: 1.25em;
+      }
     }
   }
 </style>
@@ -311,11 +333,11 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
               <p>What is opendata.fit?</p>
             </a>
             -->
-            <a href="https://opendata.fit">
+            <a href="https://docs.opendata.fit">
               <h2>Documentation&nbsp;→</h2>
               <p>Learn how to use opendata.fit</p>
             </a>
-            <a href="https://opendata.fit">
+            <a href="https://community.opendata.fit">
               <h2>Community&nbsp;→</h2>
               <p>A support forum for opendata.fit users</p>
             </a>
