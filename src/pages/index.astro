@@ -51,14 +51,14 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
       grid-template-columns:
         [gutter-left] 4ch
         [content-col] 1fr
-        [gutter-right] 4ch[end-col];
+        [gutter-right] 5ch[end-col];
     }
 
     @include mobile-bp {
       grid-template-columns:
         [gutter-left] 2ch
         [content-col] 1fr
-        [gutter-right] 2ch[end-col];
+        [gutter-right] 3ch [end-col];
     }
 
     // TODO reconsider row gutter implementation
@@ -88,22 +88,27 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
       padding-bottom: 10vh;
 
       section.introduction {
-        min-height: 80vh;
+        min-height: 75vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         container-type: inline-size;
 
         .intro-box {
-          width: 80ch;
+          max-width: 80ch;
         }
 
         .link-tiles {
           display: grid;
           margin-top: 2em;
           grid-template-columns: repeat(4, minmax(0, 1fr));
+
           @container (max-width: 1120px) {
             grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+
+          @container (max-width: 600px) {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
           }
           column-gap: 2ch;
           row-gap: 2.25em;
@@ -157,6 +162,14 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
             height: auto;
           }
         }
+        @include mobile-bp {
+          display: block;
+          .screenshot-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+          }
+        }
       }
 
       section.marketing-tiles {
@@ -176,10 +189,17 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
           padding: 3em;
           height: auto;
           grid-template-columns: repeat(3, minmax(0, 1fr));
+
           @container (max-width: 1120px) {
             padding: 2em;
             grid-template-columns: repeat(2, minmax(0, 1fr));
           }
+
+          @container (max-width: 700px) {
+            padding: 2em;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+          }
+
           img {
             margin: auto;
             display: block;
