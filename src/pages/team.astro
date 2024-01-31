@@ -1,0 +1,188 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
+---
+
+<style lang="scss">
+  @use "@opendatafit/common-styles/common-styles/variables/fonts";
+
+  main {
+    section.bios {
+      .bio-container {
+        display: grid;
+        grid-template-columns: 20ch auto;
+        column-gap: 4ch;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .layout-container {
+    display: grid;
+
+    grid-template-rows:
+      [header] auto
+      [content] auto
+      [footer] auto [end-row];
+
+    grid-template-columns:
+      [gutter-left] 1fr
+      [content-col] 80ch
+      [gutter-right] 1fr [end-col];
+
+    grid-template-areas:
+      "left-gutter head right-gutter"
+      "left-gutter main right-gutter"
+      "left-gutter foot right-gutter";
+
+    .site-header {
+      grid-area: head;
+    }
+
+    .site-header-background {
+      grid-area: header / gutter-left / header / end-col;
+      // background-color: whitesmoke;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .site-footer-background {
+      grid-area: footer / gutter-left / footer / end-col;
+      background-color: whitesmoke;
+      border-top: 1px solid #ddd;
+    }
+
+    main {
+      grid-area: main;
+    }
+
+    .site-footer {
+      grid-area: foot;
+
+      .attribution {
+        @include fonts.monospace;
+
+        font-family: var(--monospace);
+        font-family: "Inconsolata" !important;
+      }
+    }
+  }
+</style>
+
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={SITE_DESCRIPTION} />
+    <link href="/assets/fonts/FontAwesome/css/all.css" rel="stylesheet" />
+  </head>
+  <body class="opendatafit">
+    <div class="layout-container">
+      <div class="site-header-background"></div>
+      <div class="site-header">
+        <Header title={SITE_TITLE} />
+      </div>
+
+      <main>
+        <h1>The opendata.fit team</h1>
+
+        <section class="bios">
+          <div class="bio-container">
+            <div>
+              <img src="/assets/images/headshots/palli_headshot.jpg" />
+              <a href="https://www.unsw.edu.au/staff/pall-thordarson">UNSW</a>
+            </div>
+
+            <div>
+              <h2>Professor Pall Thordarson</h2>
+              <p>
+                Pall is the director of the UNSW RNA institute and a professor
+                with research interests ranging from nanomedicine and
+                light-harvesting materials to supramolecular and systems
+                chemistry. Pall is the progenitor of the opendata.fit project,
+                starting from its original incarnation as supramolecular.org.
+                Pall is passionate about facilitating tooling for open science
+                and encouraging reproducibility in data analysis.
+              </p>
+            </div>
+          </div>
+
+          <div class="bio-container">
+            <div>
+              <img src="/assets/images/headshots/varvara_headshot.jpg" />
+              <a href="https://echus.co/">Website</a>
+            </div>
+
+            <div>
+              <h2>Varvara Efremova</h2>
+              <p>
+                Varvara is a solutions architect and implementation specialist
+                for the opendata.fit project with a background in astrophysics.
+                She is responsible for architecting and implementing the backend
+                services underpinning the opendata.fit ecosystem as well as
+                frontend implementation details.
+              </p>
+              <p>
+                In her various roles she has worked extensively across the web
+                application architecture landscape and with the Python
+                scientific stack. She prioritises designing user-focused,
+                modular, maintainable and well-documented applications, as well
+                as establishing good coding practices to ensure project
+                sustainability.
+              </p>
+            </div>
+          </div>
+
+          <div class="bio-container">
+            <div>
+              <img src="/assets/images/headshots/james_headshot.jpg" />
+              <a href="https://github.com/JamesWilmot/resume">Resume</a>
+            </div>
+
+            <div>
+              <h2>James Wilmot</h2>
+              <p>
+                James is a solutions architect for the opendata.fit project. He
+                specialises in data specification design and is a passionate
+                advocate for FAIR data management principles. He has extensive
+                experience in web application architecture and frontend design.
+              </p>
+              <p>
+                James loves to run and has ridden a touring bicycle across both
+                islands of New Zealand on multiple occasions.
+              </p>
+            </div>
+          </div>
+
+          <div class="bio-container">
+            <div>
+              <img src="/assets/images/headshots/thomas_headshot.jpg" />
+              <a href="https://www.linkedin.com/in/thomas-wilmot/">LinkedIn</a>
+            </div>
+
+            <div>
+              <h2>Thomas Wilmot</h2>
+              <p>
+                Thomas is the cloud infrastructure specialist for opendata.fit.
+                He has extensive experience with AWS and Google Cloud
+                infrastructure deployments and holds certifications for both. He
+                specialises in infrastructure as code deployments with
+                Terraform, ensuring reproducible and resilient deployments.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <div class="site-footer-background"></div>
+      <div class="site-footer">
+        <Footer />
+      </div>
+    </div>
+  </body>
+</html>
