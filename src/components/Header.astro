@@ -6,6 +6,8 @@ import { SITE_TITLE } from "../consts";
 <style lang="scss">
   @use "@opendatafit/common-styles/common-styles/mixins/display";
   @use "@opendatafit/common-styles/common-styles/variables/fonts";
+  
+  @use "../styles/mixins/breakpoints";
 
   header.site-header {
     // color: colour.$banner;
@@ -36,6 +38,11 @@ import { SITE_TITLE } from "../consts";
         height: 100%;
         gap: 2ch;
         align-items: center;
+      }
+      @include breakpoints.mobile-bp {
+        .internal-links {
+          display: none;
+        }
       }
     }
     a {
