@@ -6,6 +6,8 @@ const today = new Date();
   @use "@opendatafit/common-styles/common-styles/variables/fonts";
   @use "@opendatafit/common-styles/common-styles/mixins/lists";
 
+  @use "../styles/mixins/breakpoints";
+
   strong {
     font-variation-settings: "opsz" 14,"wght" 550;
   }
@@ -51,18 +53,25 @@ const today = new Date();
     .supporters {
       @include lists.reset;
       box-sizing: border-box;
-      display: flex;
+      display: grid;
       justify-content: center;
       gap: 3ch;
       margin: 0 auto;
-      height: 5em;
       width: auto;
+      grid-auto-rows: 5em;
+
+      grid-template-columns: repeat(4, auto);
       margin-top: 1em;
       margin-bottom: 2em;
-      li {
-        flex: 0 0 auto;
-        min-width: 0;
+
+      @include breakpoints.mobile-bp {
+        grid-template-columns: repeat(2, auto);
       }
+
+      @media (max-width: 500px) {
+        grid-template-columns: repeat(1, auto);
+      }
+
       a {
         display: block;
         height: 100%;
