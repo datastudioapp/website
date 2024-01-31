@@ -4,6 +4,8 @@
 @forward "@opendatafit/common-styles/common-styles/_elements.scss";
 @forward "@opendatafit/common-styles/common-styles/_aria.scss";
 
+@forward "site-layout.scss";
+
 @use "@opendatafit/common-styles/common-styles/variables/_fonts";
 
 @font-face {
