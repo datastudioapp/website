@@ -4,6 +4,7 @@ const today = new Date();
 
 <style lang="scss">
   @use "@opendatafit/common-styles/common-styles/variables/fonts";
+  @use "@opendatafit/common-styles/common-styles/mixins/lists";
 
   strong {
     font-variation-settings: "opsz" 14,"wght" 550;
@@ -48,16 +49,34 @@ const today = new Date();
 
 
     .supporters {
+      @include lists.reset;
+      box-sizing: border-box;
       display: flex;
       justify-content: center;
+      gap: 3ch;
+      margin: 0 auto;
+      height: 5em;
+      width: auto;
       margin-top: 1em;
       margin-bottom: 2em;
-      height: 5em;
-      gap: 3ch;
+      li {
+        flex: 0 0 auto;
+        min-width: 0;
+      }
+      a {
+        display: block;
+        height: 100%;
+        min-width: 0;
+      }
+
       img {
+        min-width: 0;
         height: 100%;
         &.unsw-logo {
           height: 80%;
+        }
+        &.ardc-logo {
+          height: 75%;
         }
       }
     }
@@ -66,14 +85,30 @@ const today = new Date();
 
 <footer class="site-footer">
   <div class="project-attribution">
+    <div class="supporters-container">
     <strong>Proudly supported by</strong>
-    <div class="supporters">
-      <a href="https://www.rna.unsw.edu.au">
-        <img class="rnai-logo" src="assets/images/logos/unsw-rnai.png" />
-      </a>
-      <a href="https://www.unsw.edu.au">
-        <img class="unsw-logo" src="assets/images/logos/unsw.svg" />
-      </a>
+      <ul class="supporters">
+        <li>
+          <a href="https://www.rna.unsw.edu.au">
+            <img class="rnai-logo" src="assets/images/logos/unsw-rnai.png" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.unsw.edu.au">
+            <img class="unsw-logo" src="assets/images/logos/unsw.svg" />
+          </a>
+        </li>
+        <li>
+          <a href="https://ardc.edu.au/">
+            <img class="ardc-logo" src="assets/images/logos/ardc.svg" />
+          </a>
+        </li>
+        <li>
+          <a href="https://ardc.edu.au/">
+            <img class="ncris-logo" src="assets/images/logos/ncris.png" />
+          </a>
+        </li>
+      </ul>
     </div>
     <p>
       Part of the <a href="https://imagingtools.org.au/"
