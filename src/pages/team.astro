@@ -24,56 +24,6 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
       }
     }
   }
-
-  .layout-container {
-    display: grid;
-
-    grid-template-rows:
-      [header] auto
-      [content] auto
-      [footer] auto [end-row];
-
-    grid-template-columns:
-      [gutter-left] 1fr
-      [content-col] 80ch
-      [gutter-right] 1fr [end-col];
-
-    grid-template-areas:
-      "left-gutter head right-gutter"
-      "left-gutter main right-gutter"
-      "left-gutter foot right-gutter";
-
-    .site-header {
-      grid-area: head;
-    }
-
-    .site-header-background {
-      grid-area: header / gutter-left / header / end-col;
-      // background-color: whitesmoke;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .site-footer-background {
-      grid-area: footer / gutter-left / footer / end-col;
-      background-color: whitesmoke;
-      border-top: 1px solid #ddd;
-    }
-
-    main {
-      grid-area: main;
-    }
-
-    .site-footer {
-      grid-area: foot;
-
-      .attribution {
-        @include fonts.monospace;
-
-        font-family: var(--monospace);
-        font-family: "Inconsolata" !important;
-      }
-    }
-  }
 </style>
 
 <html lang="en">
@@ -89,7 +39,7 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
       </div>
 
       <main>
-        <h1>The opendata.fit team</h1>
+        <h1>Meet the team</h1>
 
         <section class="bios">
           <div class="bio-container">

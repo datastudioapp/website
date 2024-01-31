@@ -1,0 +1,74 @@
+@use "@opendatafit/common-styles/common-styles/variables/fonts";
+
+@use "mixins/breakpoints";
+
+.layout-container {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+
+  display: grid;
+
+  grid-template-rows:
+    [header] auto
+    [header-gutter] 2rem
+    [content] auto
+    [footer] auto [end-row];
+
+  grid-template-columns:
+    [gutter-left] 1fr
+    [content-col] 120ch
+    [gutter-right] 1fr [end-col];
+
+  @include breakpoints.responsive-desktop-bp {
+    grid-template-columns:
+      [gutter-left] 4ch
+      [content-col] 1fr
+      [gutter-right] 5ch[end-col];
+  }
+
+  @include breakpoints.mobile-bp {
+    grid-template-columns:
+      [gutter-left] 2ch
+      [content-col] 1fr
+      [gutter-right] 3ch [end-col];
+  }
+
+  // TODO reconsider row gutter implementation
+  // or just research how to do this in non shit manner
+  grid-template-areas:
+    "left-gutter head right-gutter"
+    "left-gutter header-gutter right-gutter"
+    "left-gutter main right-gutter"
+    "left-gutter foot right-gutter";
+
+  .site-header-background {
+    grid-area: header / gutter-left / header / end-col;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .site-header {
+    grid-area: head;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  .site-footer-background {
+    grid-area: footer / gutter-left / footer / end-col;
+    background-color: #f6f6f6;
+    border-top: 1px solid #ddd;
+  }
+
+  .site-footer {
+    grid-area: foot;
+
+    .attribution {
+      @include fonts.monospace;
+
+      font-family: var(--monospace);
+      font-family: "Inconsolata" !important;
+    }
+  }
+}
