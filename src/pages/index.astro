@@ -4,7 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
-var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
+var title = `${SITE_TITLE}`;
 ---
 
 <style lang="scss">
@@ -18,7 +18,6 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
       display: flex;
       flex-direction: column;
       gap: 2rem;
-
 
       section.introduction {
         min-height: 75vh;
@@ -169,7 +168,6 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
       }
     }
 
-
     .opendatafit-branding {
       display: flex;
       align-items: center;
@@ -233,110 +231,59 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
           <div class="opendatafit-branding">
             <img
               class="opendatafit-logo"
-              src="/assets/images/logos/opendatafit.svg"
+              src="/assets/images/logos/opendatastudio.svg"
             />
-            <h1 class="title-branding">opendata.fit</h1>
+            <h1 class="title-branding">opendata.studio</h1>
           </div>
           <span class="title-byline">
-            Declarative data analysis for reproducibility and publication
+            Interactive data publication for the web
           </span>
 
           <div class="intro-box">
             <p>
-              opendata.fit is a data analysis platform that automatically
-              captures data provenance and analysis history, making publishing
-              reproducible workflows as simple as citing a link.
+              opendata.studio is a software toolbox for publishing data
+              workflows as fully interactive, reproducible web applications,
+              currently in development.
+            </p>
+            <p>
+              As part of this work, we maintain a set of open data standards
+              that encapsulate an entire data workflow from analysis to
+              visualisation, based on the established <a
+                href="https://frictionlessdata.io/">Frictionless Data</a
+              > specification.
             </p>
           </div>
 
           <div class="link-tiles">
-            <a href="https://community.opendata.fit">
-              <h2>Community&nbsp;→</h2>
-              <p>A support forum for opendata.fit users</p>
-            </a>
-            <a href="https://docs.opendata.fit">
-              <h2>Documentation&nbsp;→</h2>
-              <p>Learn how to use opendata.fit</p>
+            <a href="https://forum.opendata.studio">
+              <h2>Forum&nbsp;→</h2>
+              <p>Get support or contribute</p>
             </a>
             <a href="/team">
               <h2>Team&nbsp;→</h2>
-              <p>Meet the opendata.fit team</p>
+              <p>The opendata.studio team</p>
             </a>
           </div>
         </section>
 
-        <section class="app-screenshot">
+        <section class="embeddable-widgets">
           <div class="text-container">
             <div>
-              <h2>Flexibility built in</h2>
-              <p>
-                Manage datasets and run analysis workflows in the cloud using our
-                web-based interface, or execute workflows locally with our CLI
-                tools and upload the results.
-              </p>
-
-              <p>Code and run your own Python-based algorithms.</p>
-
-              <p>
-                Build a user-friendly web interface for your code with our UI
-                components:
-                <ul>
-                  <li>Plotly and Vega graphing components</li>
-                  <li>Handsontable tabular data display components</li>
-                  <li>Parameter input/output display component</li>
-                  <li>File upload component</li>
-                </ul>
-              </p>
-
-              <p>Publish complete workflows as citable entities.</p>
+              <h2>Placeholder for embeddable widgets</h2>
+              <p>Lorem ipsum.</p>
             </div>
           </div>
-          <div class="screenshot-container">
-            <img src="assets/images/index/analysis_screenshot.png" />
+          <div class="widget-container">
+            <p>Widget container</p>
           </div>
         </section>
 
-        <section class="marketing-tiles">
-          <h2>How it works</h2>
-          <div class="marketing-tiles-grid">
-            <div>
-              <img src="assets/images/index/tile_upload.svg" />
-              <h2>Upload</h2>
-              <p>Upload experiment data</p>
-            </div>
-            <div>
-              <img src="assets/images/index/tile_execute.svg" />
-              <h2>Run</h2>
-              <p>Run analysis online or locally</p>
-            </div>
-            <div>
-              <img src="assets/images/index/tile_visualise.svg" />
-              <h2>Visualise</h2>
-              <p>Visualise results</p>
-            </div>
-            <div>
-              <img src="assets/images/index/tile_library.svg" />
-              <h2>Explore</h2>
-              <p>
-                Select from a library of user-contributed analysis algorithms
-              </p>
-            </div>
-            <div>
-              <img src="assets/images/index/tile_develop.svg" />
-              <h2>Contribute</h2>
-              <p>Write and contribute analysis algorithms</p>
-            </div>
-            <div>
-              <p>
-                [42] Jane Smith, opendata.fit: Example Analysis, Sept 2022.
-                Available at <a href="https://app.opendata.fit/s/cfdf85"
-                  >https://app.opendata.fit/s/cfdf85</a
-                >
-              </p>
-              <h2>Publish</h2>
-              <p>Publish reproducible workflows by citing a single link</p>
-            </div>
-          </div>
+        <section class="cli-demo">
+          <h2>Placeholder for CLI demo</h2>
+        </section>
+
+        <section class="datapackage-overview">
+          <h2>Placeholder for datapackage overview</h2>
         </section>
       </main>
 
