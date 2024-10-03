@@ -1,5 +1,5 @@
 ---
-title: "The opendata.fit datapackage profile"
+title: "The opendata.fit dataflow profile"
 description: "Lorem ipsum dolor sit amet"
 pubDate: "Jul 08 2022"
 ---
