@@ -4,9 +4,6 @@ import { SITE_TITLE } from "../consts";
 ---
 
 <style lang="scss">
-  @use "@opendatafit/common-styles/common-styles/mixins/display";
-  @use "@opendatafit/common-styles/common-styles/variables/fonts";
-  
   @use "../styles/mixins/breakpoints";
 
   header.site-header {
@@ -56,19 +53,16 @@ import { SITE_TITLE } from "../consts";
   <div class="branding">
     <a href="/" title="Home">
       <img
-        class="opendatafit-logo"
-        src="/assets/images/logos/opendatafit.svg"
+        class="opendatastudio-logo"
+        src="/assets/images/logos/opendatastudio.svg"
       />
     </a>
   </div>
   <nav>
     <div class="internal-links">
       <HeaderLink href="/">Home</HeaderLink>
-      <HeaderLink href="https://community.opendata.fit">Community</HeaderLink>
-      <HeaderLink href="https://docs.opendata.fit">Documentation</HeaderLink>
+      <HeaderLink href="https://docs.opendata.studio">Documentation</HeaderLink>
       <HeaderLink href="/team">Team</HeaderLink>
-      <!-- <HeaderLink href="/richardstallmanisgod">Open source</HeaderLink> -->
-      <!-- <HeaderLink href="/blog">Blog</HeaderLink> -->
     </div>
   </nav>
 </header>

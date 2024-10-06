@@ -1,12 +1,5 @@
 @forward "normalize.css/normalize.css";
-
-@forward "@opendatafit/common-styles/common-styles/_branding.scss";
-@forward "@opendatafit/common-styles/common-styles/_elements.scss";
-@forward "@opendatafit/common-styles/common-styles/_aria.scss";
-
 @forward "site-layout.scss";
-
-@use "@opendatafit/common-styles/common-styles/variables/_fonts";
 
 @font-face {
   font-family: Inter;
@@ -29,16 +22,6 @@
       format("truetype-variations");
 }
 
-@font-face {
-  font-family: Inconsolata;
-  font-weight: 100 900;
-  src:
-    url("/assets/fonts/Inconsolata/Inconsolata-VariableFont_wdth,wght.ttf")
-      format("truetype supports variations"),
-    url("/assets/fonts/Inconsolata/Inconsolata-VariableFont_wdth,wght.ttf")
-      format("truetype-variations");
-}
-
 :root {
   font-family: "Inter";
 }
@@ -51,9 +34,27 @@ body {
 
 h1 {
   font-family: "Inter" !important;
-  font-variation-settings: "opsz" 14,"wght" 500;
+  font-variation-settings:
+    "opsz" 14,
+    "wght" 500;
 }
 
 h2 {
   font-family: "Inter" !important;
+}
+
+// Links
+a {
+  &:link,
+  &:visited {
+    color: #212d49;
+  }
+  &:hover,
+  &:active {
+    color: firebrick;
+  }
+
+  &:disabled {
+    text-decoration: none;
+  }
 }

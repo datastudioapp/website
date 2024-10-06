@@ -613,10 +613,6 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@opendatafit/common-styles@https://github.com/opendatafit/common-styles.git#3-refactor-sass-variables-into-css-variables":
-  version "1.0.0"
-  resolved "https://github.com/opendatafit/common-styles.git#3dc0ca90e355dfe94b9ef709183769081e720691"
-
 "@types/acorn@^4.0.0":
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/@types/acorn/-/acorn-4.0.6.tgz#d61ca5480300ac41a7d973dd5b84d0a591154a22"

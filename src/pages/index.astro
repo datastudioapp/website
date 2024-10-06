@@ -4,13 +4,10 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
-var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
+var title = `${SITE_TITLE}`;
 ---
 
 <style lang="scss">
-  @use "@opendatafit/common-styles/common-styles/variables/fonts";
-  @use "@opendatafit/common-styles/common-styles/mixins/boxmodel";
-
   @use "../styles/mixins/breakpoints";
 
   .layout-container {
@@ -18,7 +15,6 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
       display: flex;
       flex-direction: column;
       gap: 2rem;
-
 
       section.introduction {
         min-height: 75vh;
@@ -56,6 +52,7 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
           }
 
           a {
+            color: black;
             text-decoration: none;
             background-color: white;
             border: 1px solid #ddd;
@@ -84,93 +81,9 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
           }
         }
       }
-
-      section.app-screenshot {
-        display: grid;
-        grid-template-columns: 35ch auto;
-        column-gap: 8ch;
-
-        .text-container {
-          display: flex;
-          align-items: center;
-        }
-
-        .screenshot-container {
-          img {
-            height: 70vh;
-            //border: 1px solid #ddd;
-            border-radius: 1em;
-            box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.1);
-          }
-        }
-
-        @include breakpoints.responsive-desktop-bp {
-          display: block;
-          .screenshot-container img {
-            width: 100%;
-            height: auto;
-          }
-        }
-        @include breakpoints.mobile-bp {
-          display: block;
-          .screenshot-container img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-          }
-        }
-      }
-
-      section.marketing-tiles {
-        container-type: inline-size;
-        display: flex;
-        flex-direction: column;
-        min-height: 85vh;
-        justify-content: center;
-        h2 {
-          text-align: center;
-        }
-        .marketing-tiles-grid {
-          display: grid;
-          grid-row-gap: 3em;
-          border: 1px dashed #ddd;
-          border-radius: 0.4em;
-          padding: 3em;
-          height: auto;
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-
-          @container (max-width: 1120px) {
-            padding: 2em;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-          }
-
-          @container (max-width: 700px) {
-            padding: 2em;
-            grid-template-columns: repeat(1, minmax(0, 1fr));
-          }
-
-          img {
-            margin: auto;
-            display: block;
-            width: 20%;
-          }
-
-          h2,
-          p {
-            text-align: center;
-            margin: 0;
-          }
-
-          h2 {
-            margin-top: 0.5em;
-            font-size: 1.15em;
-          }
-        }
-      }
     }
 
-
-    .opendatafit-branding {
+    .opendatastudio-branding {
       display: flex;
       align-items: center;
       margin: 1em 0;
@@ -202,7 +115,7 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
     }
 
     @media (max-width: 445px) {
-      .opendatafit-branding {
+      .opendatastudio-branding {
         font-size: 0.8em;
         margin: 0;
         margin-bottom: 1em;
@@ -221,7 +134,7 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
     <link href="/assets/fonts/FontAwesome/css/all.css" rel="stylesheet" />
   </head>
 
-  <body class="opendatafit">
+  <body class="opendatastudio">
     <div class="layout-container">
       <div class="site-header-background"></div>
       <div class="site-header">
@@ -230,112 +143,46 @@ var title = `${SITE_TITLE} | ${SITE_DESCRIPTION}`;
 
       <main>
         <section class="introduction">
-          <div class="opendatafit-branding">
+          <div class="opendatastudio-branding">
             <img
-              class="opendatafit-logo"
-              src="/assets/images/logos/opendatafit.svg"
+              class="opendatastudio-logo"
+              src="/assets/images/logos/opendatastudio.svg"
             />
-            <h1 class="title-branding">opendata.fit</h1>
+            <h1 class="title-branding">opendata.studio</h1>
           </div>
           <span class="title-byline">
-            Declarative data analysis for reproducibility and publication
+            Reproducible data publication for the web
           </span>
 
           <div class="intro-box">
             <p>
-              opendata.fit is a data analysis platform that automatically
-              captures data provenance and analysis history, making publishing
-              reproducible workflows as simple as citing a link.
+              opendata.studio is a software toolbox that makes publishing
+              reproducible data workflows simple.
+            </p>
+            <p>
+              We provide an open-source standard that captures the entire data
+              workflow—from analysis to visualization—in a fully reproducible
+              package, built on the <a href="https://frictionlessdata.io"
+                >Frictionless Data</a
+              > specification.
+            </p>
+            <p>
+              opendata.studio packages can be published as interactive web
+              applications, or embedded as individual components in other web
+              pages, making it simple to share data while maintaining
+              reproducibility and provenance.
             </p>
           </div>
 
           <div class="link-tiles">
-            <a href="https://community.opendata.fit">
-              <h2>Community&nbsp;→</h2>
-              <p>A support forum for opendata.fit users</p>
-            </a>
-            <a href="https://docs.opendata.fit">
+            <a href="https://forum.opendata.studio">
               <h2>Documentation&nbsp;→</h2>
-              <p>Learn how to use opendata.fit</p>
+              <p>Get started with opendata.studio</p>
             </a>
             <a href="/team">
               <h2>Team&nbsp;→</h2>
-              <p>Meet the opendata.fit team</p>
+              <p>The opendata.studio team</p>
             </a>
-          </div>
-        </section>
-
-        <section class="app-screenshot">
-          <div class="text-container">
-            <div>
-              <h2>Flexibility built in</h2>
-              <p>
-                Manage datasets and run analysis workflows in the cloud using our
-                web-based interface, or execute workflows locally with our CLI
-                tools and upload the results.
-              </p>
-
-              <p>Code and run your own Python-based algorithms.</p>
-
-              <p>
-                Build a user-friendly web interface for your code with our UI
-                components:
-                <ul>
-                  <li>Plotly and Vega graphing components</li>
-                  <li>Handsontable tabular data display components</li>
-                  <li>Parameter input/output display component</li>
-                  <li>File upload component</li>
-                </ul>
-              </p>
-
-              <p>Publish complete workflows as citable entities.</p>
-            </div>
-          </div>
-          <div class="screenshot-container">
-            <img src="assets/images/index/analysis_screenshot.png" />
-          </div>
-        </section>
-
-        <section class="marketing-tiles">
-          <h2>How it works</h2>
-          <div class="marketing-tiles-grid">
-            <div>
-              <img src="assets/images/index/tile_upload.svg" />
-              <h2>Upload</h2>
-              <p>Upload experiment data</p>
-            </div>
-            <div>
-              <img src="assets/images/index/tile_execute.svg" />
-              <h2>Run</h2>
-              <p>Run analysis online or locally</p>
-            </div>
-            <div>
-              <img src="assets/images/index/tile_visualise.svg" />
-              <h2>Visualise</h2>
-              <p>Visualise results</p>
-            </div>
-            <div>
-              <img src="assets/images/index/tile_library.svg" />
-              <h2>Explore</h2>
-              <p>
-                Select from a library of user-contributed analysis algorithms
-              </p>
-            </div>
-            <div>
-              <img src="assets/images/index/tile_develop.svg" />
-              <h2>Contribute</h2>
-              <p>Write and contribute analysis algorithms</p>
-            </div>
-            <div>
-              <p>
-                [42] Jane Smith, opendata.fit: Example Analysis, Sept 2022.
-                Available at <a href="https://app.opendata.fit/s/cfdf85"
-                  >https://app.opendata.fit/s/cfdf85</a
-                >
-              </p>
-              <h2>Publish</h2>
-              <p>Publish reproducible workflows by citing a single link</p>
-            </div>
           </div>
         </section>
       </main>

@@ -2,6 +2,7 @@
 export default {
   plugins: ["prettier-plugin-astro"],
   astroAllowShorthand: false,
+  proseWrap: "always",
   overrides: [
     {
       files: "*.astro",
