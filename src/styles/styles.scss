@@ -1,12 +1,5 @@
 @forward "normalize.css/normalize.css";
-
-@forward "@opendatastudio/common-styles/common-styles/_branding.scss";
-@forward "@opendatastudio/common-styles/common-styles/_elements.scss";
-@forward "@opendatastudio/common-styles/common-styles/_aria.scss";
-
 @forward "site-layout.scss";
-
-@use "@opendatastudio/common-styles/common-styles/variables/_fonts";
 
 @font-face {
   font-family: Inter;
@@ -48,4 +41,20 @@ h1 {
 
 h2 {
   font-family: "Inter" !important;
+}
+
+// Links
+a {
+  &:link,
+  &:visited {
+    color: #212d49;
+  }
+  &:hover,
+  &:active {
+    color: firebrick;
+  }
+
+  &:disabled {
+    text-decoration: none;
+  }
 }

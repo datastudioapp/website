@@ -3,9 +3,6 @@ const today = new Date();
 ---
 
 <style lang="scss">
-  @use "@opendatastudio/common-styles/common-styles/variables/fonts";
-  @use "@opendatastudio/common-styles/common-styles/mixins/lists";
-
   @use "../styles/mixins/breakpoints";
 
   strong {
@@ -22,37 +19,28 @@ const today = new Date();
     .footer-base {
       margin-top: 1rem;
       display: flex;
-
-      .website-attribution {
-        margin-left: auto;
-      }
-
-      @container (max-width: 600px) {
-        display: block;
-        text-align: center;
-        .website-attribution {
-          margin: 1em 0;
-          display: block;
-        }
-      }
     }
 
     .project-attribution {
       margin: 2em 0;
       text-align: center;
     }
+
     .site-source i {
       margin-right: 3px;
     }
-    small.website-attribution,
-    .site-source a {
-      @include fonts.monospace;
-      font-family: var(--monospace-font);
-      font-weight: 400;
-    }
 
-    .supporters {
-      @include lists.reset;
+    ul.supporters {
+      /* List reset */
+      margin: 0;
+      padding: 0;
+      li,
+      ol {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
       box-sizing: border-box;
       display: grid;
       justify-content: center;
