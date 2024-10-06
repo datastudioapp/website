@@ -29,16 +29,6 @@
       format("truetype-variations");
 }
 
-@font-face {
-  font-family: Inconsolata;
-  font-weight: 100 900;
-  src:
-    url("/assets/fonts/Inconsolata/Inconsolata-VariableFont_wdth,wght.ttf")
-      format("truetype supports variations"),
-    url("/assets/fonts/Inconsolata/Inconsolata-VariableFont_wdth,wght.ttf")
-      format("truetype-variations");
-}
-
 :root {
   font-family: "Inter";
 }

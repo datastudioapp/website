@@ -64,12 +64,5 @@
 
   .site-footer {
     grid-area: foot;
-
-    .attribution {
-      @include fonts.monospace;
-
-      font-family: var(--monospace);
-      font-family: "Inconsolata" !important;
-    }
   }
 }
