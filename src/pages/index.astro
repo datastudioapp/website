@@ -8,8 +8,8 @@ var title = `${SITE_TITLE}`;
 ---
 
 <style lang="scss">
-  @use "@opendatafit/common-styles/common-styles/variables/fonts";
-  @use "@opendatafit/common-styles/common-styles/mixins/boxmodel";
+  @use "@opendatastudio/common-styles/common-styles/variables/fonts";
+  @use "@opendatastudio/common-styles/common-styles/mixins/boxmodel";
 
   @use "../styles/mixins/breakpoints";
 
@@ -83,92 +83,9 @@ var title = `${SITE_TITLE}`;
           }
         }
       }
-
-      section.app-screenshot {
-        display: grid;
-        grid-template-columns: 35ch auto;
-        column-gap: 8ch;
-
-        .text-container {
-          display: flex;
-          align-items: center;
-        }
-
-        .screenshot-container {
-          img {
-            height: 70vh;
-            //border: 1px solid #ddd;
-            border-radius: 1em;
-            box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.1);
-          }
-        }
-
-        @include breakpoints.responsive-desktop-bp {
-          display: block;
-          .screenshot-container img {
-            width: 100%;
-            height: auto;
-          }
-        }
-        @include breakpoints.mobile-bp {
-          display: block;
-          .screenshot-container img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-          }
-        }
-      }
-
-      section.marketing-tiles {
-        container-type: inline-size;
-        display: flex;
-        flex-direction: column;
-        min-height: 85vh;
-        justify-content: center;
-        h2 {
-          text-align: center;
-        }
-        .marketing-tiles-grid {
-          display: grid;
-          grid-row-gap: 3em;
-          border: 1px dashed #ddd;
-          border-radius: 0.4em;
-          padding: 3em;
-          height: auto;
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-
-          @container (max-width: 1120px) {
-            padding: 2em;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-          }
-
-          @container (max-width: 700px) {
-            padding: 2em;
-            grid-template-columns: repeat(1, minmax(0, 1fr));
-          }
-
-          img {
-            margin: auto;
-            display: block;
-            width: 20%;
-          }
-
-          h2,
-          p {
-            text-align: center;
-            margin: 0;
-          }
-
-          h2 {
-            margin-top: 0.5em;
-            font-size: 1.15em;
-          }
-        }
-      }
     }
 
-    .opendatafit-branding {
+    .opendatastudio-branding {
       display: flex;
       align-items: center;
       margin: 1em 0;
@@ -200,7 +117,7 @@ var title = `${SITE_TITLE}`;
     }
 
     @media (max-width: 445px) {
-      .opendatafit-branding {
+      .opendatastudio-branding {
         font-size: 0.8em;
         margin: 0;
         margin-bottom: 1em;
@@ -219,7 +136,7 @@ var title = `${SITE_TITLE}`;
     <link href="/assets/fonts/FontAwesome/css/all.css" rel="stylesheet" />
   </head>
 
-  <body class="opendatafit">
+  <body class="opendatastudio">
     <div class="layout-container">
       <div class="site-header-background"></div>
       <div class="site-header">
@@ -228,9 +145,9 @@ var title = `${SITE_TITLE}`;
 
       <main>
         <section class="introduction">
-          <div class="opendatafit-branding">
+          <div class="opendatastudio-branding">
             <img
-              class="opendatafit-logo"
+              class="opendatastudio-logo"
               src="/assets/images/logos/opendatastudio.svg"
             />
             <h1 class="title-branding">opendata.studio</h1>
@@ -273,25 +190,6 @@ var title = `${SITE_TITLE}`;
               <p>The opendata.studio team</p>
             </a>
           </div>
-        </section>
-
-        <section class="embeddable-widgets">
-          <div class="text-container">
-            <div>
-              <h2>Placeholder for embeddable widgets</h2>
-            </div>
-          </div>
-          <div class="widget-container">
-            <p>Widget container</p>
-          </div>
-        </section>
-
-        <section class="cli-demo">
-          <h2>Placeholder for CLI demo</h2>
-        </section>
-
-        <section class="dataflow-overview">
-          <h2>Placeholder for dataflow overview</h2>
         </section>
       </main>
 

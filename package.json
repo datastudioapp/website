@@ -1,5 +1,5 @@
 {
-  "name": "opendata.fit",
+  "name": "opendata.studio",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -14,7 +14,7 @@
     "@astrojs/mdx": "^1.1.0",
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.0.0",
-    "@opendatafit/common-styles": "https://github.com/opendatafit/common-styles.git#3-refactor-sass-variables-into-css-variables",
+    "@opendatastudio/common-styles": "https://github.com/opendatastudio/common-styles.git#3-refactor-sass-variables-into-css-variables",
     "astro": "^3.2.2",
     "normalize.css": "^8.0.1",
     "sass": "^1.68.0"

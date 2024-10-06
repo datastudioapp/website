@@ -613,9 +613,9 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@opendatafit/common-styles@https://github.com/opendatafit/common-styles.git#3-refactor-sass-variables-into-css-variables":
+"@opendatastudio/common-styles@https://github.com/opendatastudio/common-styles.git#3-refactor-sass-variables-into-css-variables":
   version "1.0.0"
-  resolved "https://github.com/opendatafit/common-styles.git#3dc0ca90e355dfe94b9ef709183769081e720691"
+  resolved "https://github.com/opendatastudio/common-styles.git#fcd118000c695ba84ce6a43bb42c9762b008e5f9"
 
 "@types/acorn@^4.0.0":
   version "4.0.6"
