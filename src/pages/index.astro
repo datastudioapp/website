@@ -83,7 +83,7 @@ var title = `${SITE_TITLE}`;
       }
     }
 
-    .opendatastudio-branding {
+    .opendatakit-branding {
       display: flex;
       align-items: center;
       margin: 1em 0;
@@ -99,9 +99,15 @@ var title = `${SITE_TITLE}`;
         font-variant: discretionary-ligatures;
         font-variation-settings:
           "opsz" 32,
-          "wght" 490;
+          "wght" 350;
         font-size: 3em;
         color: #212d49;
+
+        .title-branding-bold {
+          font-variation-settings:
+            "opsz" 32,
+            "wght" 580;
+        }
       }
     }
 
@@ -115,7 +121,7 @@ var title = `${SITE_TITLE}`;
     }
 
     @media (max-width: 445px) {
-      .opendatastudio-branding {
+      .opendatakit-branding {
         font-size: 0.8em;
         margin: 0;
         margin-bottom: 1em;
@@ -134,7 +140,7 @@ var title = `${SITE_TITLE}`;
     <link href="/assets/fonts/FontAwesome/css/all.css" rel="stylesheet" />
   </head>
 
-  <body class="opendatastudio">
+  <body class="opendatakit">
     <div class="layout-container">
       <div class="site-header-background"></div>
       <div class="site-header">
@@ -143,12 +149,14 @@ var title = `${SITE_TITLE}`;
 
       <main>
         <section class="introduction">
-          <div class="opendatastudio-branding">
+          <div class="opendatakit-branding">
             <img
-              class="opendatastudio-logo"
-              src="/assets/images/logos/opendatastudio.svg"
+              class="opendatakit-logo"
+              src="/assets/images/logos/opendatakit.svg"
             />
-            <h1 class="title-branding">opendata.studio</h1>
+            <h1 class="title-branding">
+              open<span class="title-branding-bold">datakit</span>
+            </h1>
           </div>
           <span class="title-byline">
             Reproducible data publication for the web
@@ -156,7 +164,7 @@ var title = `${SITE_TITLE}`;
 
           <div class="intro-box">
             <p>
-              opendata.studio is a software toolbox that makes publishing
+              opendatakit is a software toolbox that makes publishing
               reproducible data workflows simple.
             </p>
             <p>
@@ -167,7 +175,7 @@ var title = `${SITE_TITLE}`;
               > specification.
             </p>
             <p>
-              opendata.studio packages can be published as interactive web
+              opendatakit packages can be published as interactive web
               applications, or embedded as individual components in other web
               pages, making it simple to share data while maintaining
               reproducibility and provenance.
@@ -175,13 +183,13 @@ var title = `${SITE_TITLE}`;
           </div>
 
           <div class="link-tiles">
-            <a href="https://docs.opendata.studio">
+            <a href="https://docs.opendatakit">
               <h2>Documentation&nbsp;→</h2>
-              <p>Get started with opendata.studio</p>
+              <p>Get started with opendatakit</p>
             </a>
             <a href="/team">
               <h2>Team&nbsp;→</h2>
-              <p>The opendata.studio team</p>
+              <p>The opendatakit team</p>
             </a>
           </div>
         </section>
