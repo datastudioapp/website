@@ -10,6 +10,10 @@ var title = `${SITE_TITLE}`;
 <style lang="scss">
   @use "../styles/mixins/breakpoints";
 
+  strong.brand {
+    color: #212d49;
+  }
+
   .fa-solid {
     color: #212d49;
   }
@@ -172,8 +176,8 @@ var title = `${SITE_TITLE}`;
 
           <div class="intro-box">
             <p>
-              opendatakit is a software toolbox that makes publishing
-              reproducible workflows simple.
+              <strong class="brand">opendatakit</strong> is a software toolbox that
+              makes publishing reproducible workflows simple.
             </p>
             <p>
               We provide an open-source standard that captures the entire data
@@ -197,7 +201,7 @@ var title = `${SITE_TITLE}`;
             </a>
             <a href="/team">
               <h2><i class="fa-solid fa-people-group"></i> Team&nbsp;→</h2>
-              <p>Meet the opendatakit team</p>
+              <p>Meet the <strong class="brand">opendatakit</strong> team</p>
             </a>
           </div>
         </section>
