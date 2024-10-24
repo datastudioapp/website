@@ -2,6 +2,9 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+
+import InlineBrand from "../components/branding/InlineBrand.astro";
+
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
 var title = `${SITE_TITLE}`;
@@ -9,10 +12,6 @@ var title = `${SITE_TITLE}`;
 
 <style lang="scss">
   @use "../styles/mixins/breakpoints";
-
-  strong.brand {
-    color: #212d49;
-  }
 
   .fa-solid {
     color: #212d49;
@@ -37,8 +36,9 @@ var title = `${SITE_TITLE}`;
 
         .link-tiles {
           display: grid;
+          max-width: 550px;
           margin-top: 2em;
-          grid-template-columns: repeat(4, minmax(0, 1fr));
+          grid-template-columns: repeat(2, minmax(0, 1fr));
 
           @container (max-width: 1120px) {
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -71,7 +71,8 @@ var title = `${SITE_TITLE}`;
             &:hover {
               color: firebrick;
               border: 1px solid firebrick;
-              .fa-solid {
+              .fa-solid,
+              strong {
                 color: firebrick;
               }
             }
@@ -176,8 +177,8 @@ var title = `${SITE_TITLE}`;
 
           <div class="intro-box">
             <p>
-              <strong class="brand">opendatakit</strong> is a software toolbox that
-              makes publishing reproducible workflows simple.
+              <InlineBrand /> is a software toolbox that makes publishing reproducible
+              workflows simple.
             </p>
             <p>
               We provide an open-source standard that captures the entire data
@@ -201,7 +202,7 @@ var title = `${SITE_TITLE}`;
             </a>
             <a href="/team">
               <h2><i class="fa-solid fa-people-group"></i> Team&nbsp;→</h2>
-              <p>Meet the <strong class="brand">opendatakit</strong> team</p>
+              <p>Meet the <InlineBrand /> team</p>
             </a>
           </div>
         </section>
