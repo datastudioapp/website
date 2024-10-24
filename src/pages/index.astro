@@ -10,6 +10,10 @@ var title = `${SITE_TITLE}`;
 <style lang="scss">
   @use "../styles/mixins/breakpoints";
 
+  .fa-solid {
+    color: #212d49;
+  }
+
   .layout-container {
     main {
       display: flex;
@@ -63,6 +67,9 @@ var title = `${SITE_TITLE}`;
             &:hover {
               color: firebrick;
               border: 1px solid firebrick;
+              .fa-solid {
+                color: firebrick;
+              }
             }
           }
 
@@ -141,10 +148,12 @@ var title = `${SITE_TITLE}`;
 
   <body class="opendatakit">
     <div class="layout-container">
+      <!--
       <div class="site-header-background"></div>
       <div class="site-header">
         <Header title={SITE_TITLE} />
-      </div>
+        </div>
+      -->
 
       <main>
         <section class="introduction">
@@ -169,25 +178,25 @@ var title = `${SITE_TITLE}`;
             <p>
               We provide an open-source standard that captures the entire data
               workflow—from analysis to visualisation—in a fully reproducible
-              package, built on the <a href="https://frictionlessdata.io"
+              datakit, built on the <a href="https://frictionlessdata.io"
                 >Frictionless Data</a
               > specification.
             </p>
             <p>
-              opendatakit packages can be published as interactive web
-              applications, or embedded as individual components in other web
-              pages, making it simple to share data while maintaining
-              reproducibility and provenance.
+              Datakits can be published as interactive web applications, or
+              embedded as individual components in other web pages, making it
+              simple to share data while maintaining reproducibility and
+              provenance.
             </p>
           </div>
 
           <div class="link-tiles">
             <a href="https://docs.opendatakit.io">
-              <h2>Documentation&nbsp;→</h2>
+              <h2><i class="fa-solid fa-book"></i> Documentation&nbsp;→</h2>
               <p>Get started with datakits</p>
             </a>
             <a href="/team">
-              <h2>Team&nbsp;→</h2>
+              <h2><i class="fa-solid fa-people-group"></i> Team&nbsp;→</h2>
               <p>Meet the opendatakit team</p>
             </a>
           </div>
@@ -199,5 +208,8 @@ var title = `${SITE_TITLE}`;
         <Footer />
       </div>
     </div>
+    <script
+      src="https://kit.fontawesome.com/d5670506c3.js"
+      crossorigin="anonymous"></script>
   </body>
 </html>
