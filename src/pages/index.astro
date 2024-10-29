@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
 import InlineBrand from "../components/branding/InlineBrand.astro";
+import Brand from "../components/branding/Brand.astro";
 
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
@@ -95,33 +96,6 @@ var title = `${SITE_TITLE}`;
       }
     }
 
-    .opendatakit-branding {
-      display: flex;
-      align-items: center;
-      margin: 1em 0;
-
-      img {
-        height: 4em;
-      }
-
-      .title-branding {
-        margin: 0;
-        font-family: "Inter";
-        font-variant: discretionary-ligatures;
-        font-variation-settings:
-          "opsz" 32,
-          "wght" 350;
-        font-size: 3em;
-        color: #212d49;
-
-        .title-branding-bold {
-          font-variation-settings:
-            "opsz" 32,
-            "wght" 580;
-        }
-      }
-    }
-
     .title-byline {
       font-family: "Inter";
       font-variation-settings:
@@ -162,15 +136,7 @@ var title = `${SITE_TITLE}`;
 
       <main>
         <section class="introduction">
-          <div class="opendatakit-branding">
-            <img
-              class="opendatakit-logo"
-              src="/assets/images/logos/opendatakit.svg"
-            />
-            <h1 class="title-branding">
-              open<span class="title-branding-bold">datakit</span>
-            </h1>
-          </div>
+          <Brand />
           <span class="title-byline">
             Reproducible data publication for the web
           </span>
