@@ -5,8 +5,9 @@ import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
 import InlineBrand from "../components/branding/InlineBrand.astro";
+import Brand from "../components/branding/Brand.astro";
 
-var title = `${SITE_TITLE}`;
+var title = `Team | ${SITE_TITLE}`;
 ---
 
 <style lang="scss">
@@ -14,7 +15,7 @@ var title = `${SITE_TITLE}`;
     max-width: 80ch;
     width: 100%;
     /* container-type: inline-size; */
-    margin: 0 auto;
+    /* margin: 0 auto; */
 
     h1 {
       text-align: center;
@@ -66,6 +67,20 @@ var title = `${SITE_TITLE}`;
         "wght" 500;
     }
   }
+
+  .site-header {
+    max-width: 80ch;
+    width: 100%;
+    a.home {
+      text-decoration: none;
+    }
+
+    hr {
+      border: none;
+      width: calc(100% - 4ch);
+      border-bottom: 1px solid gray;
+    }
+  }
 </style>
 
 <html lang="en">
@@ -75,9 +90,12 @@ var title = `${SITE_TITLE}`;
   </head>
   <body class="opendatastudio">
     <div class="layout-container">
-      <div class="site-header-background"></div>
+      <!-- <div class="site-header-background"></div> -->
       <div class="site-header">
-        <Header title={SITE_TITLE} />
+        <a class="home" href="/">
+          <Brand />
+        </a>
+        <hr />
       </div>
 
       <main>
@@ -123,7 +141,7 @@ var title = `${SITE_TITLE}`;
               Varvara is a solutions architect and implementation specialist for
               the <InlineBrand /> project with a background in astrophysics. She
               is responsible for architecting and implementing the backend services
-              underpinning the <InlineBrand /> ecosystem as well as frontend implementation
+              underpinning the project's ecosystem as well as frontend implementation
               details.
             </p>
             <p>
@@ -180,10 +198,12 @@ var title = `${SITE_TITLE}`;
         </section>
       </main>
 
+      <!--
       <div class="site-footer-background"></div>
       <div class="site-footer">
         <Footer />
-      </div>
+        </div>
+      -->
     </div>
   </body>
 </html>
