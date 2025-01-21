@@ -1,2 +1,2 @@
-export const SITE_TITLE = "The opendatakit project";
-export const SITE_DESCRIPTION = "Reproducible data publication for the web";
+export const SITE_TITLE = "The opendata.studio project";
+export const SITE_DESCRIPTION = "Declarative data analysis for the web";

@@ -4100,9 +4100,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"opendatakit-website@workspace:.":
+"opendatastudio-website@workspace:.":
   version: 0.0.0-use.local
-  resolution: "opendatakit-website@workspace:."
+  resolution: "opendatastudio-website@workspace:."
   dependencies:
     "@astrojs/mdx": "npm:^1.1.0"
     "@astrojs/rss": "npm:^3.0.0"

@@ -1,4 +1,4 @@
-# opendatakit website
+# opendata.studio website
 
 ## Development
 
