@@ -3,7 +3,7 @@
  * * Hero with image one the side
  */
 
-import heroImage from "@images/hero/storm-2.webp";
+import heroImage from "@images/mockups/bindfit.png";
 import { Image } from "astro:assets";
 
 import Button from "@/components/button/Button.astro";
@@ -60,13 +60,13 @@ const currLocale = getLocaleFromUrl(Astro.url);
 				data-aos-trigger="#hero-side"
 				data-aos-delay=".5"
 			>
-				<div class="relative h-full overflow-hidden rounded-xl border">
+				<div class="relative h-full overflow-hidden">
 					<Image
 						src={heroImage}
 						class="min-h-full w-auto object-cover"
 						alt="hero"
 						loading="eager"
-						width={500}
+						width={700}
 						densities={[1.5, 2]}
 					/>
 				</div>
