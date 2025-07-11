@@ -12,6 +12,7 @@ import { type navItem } from "../types/configDataTypes";
 
 // note: 1 level of dropdown is supported
 const navConfig: navItem[] = [
+	/*
 	{
 		text: "Overview",
 		link: "/overview",
@@ -231,6 +232,7 @@ const navConfig: navItem[] = [
 			},
 		],
 	},
+	*/
 ];
 
 export default navConfig;
