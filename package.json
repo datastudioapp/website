@@ -11,6 +11,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^12.6.0",
     "@astrojs/mdx": "4.3.0",
     "@astrojs/rss": "4.0.12",
     "@astrojs/sitemap": "3.4.1",
@@ -22,6 +23,7 @@
     "husky": "^8.0.0",
     "prettier": "^3.2.4",
     "prettier-plugin-astro": "^0.12.3",
-    "pretty-quick": "^4.0.0"
+    "pretty-quick": "^4.0.0",
+    "wrangler": "^4.24.3"
   }
 }
