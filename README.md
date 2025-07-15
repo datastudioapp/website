@@ -12,6 +12,21 @@ This is a starter project with all the Cosmic Themes setup and utilities includi
 
 Otherwise, this is a a plain project with no content, for those that want to bring their own UI.
 
+## Dark theme
+
+```
+<style>
+:root.dark .logo.light {
+  display: none;
+}
+
+:root:not(.dark) .logo.dark {
+  display: none;
+}
+</style>
+```
+
+
 ## Getting Started
 
 1. To get started, first install all necessary packages with `npm install` or `pnpm install`, then run an initial build to make sure the setup works `npm run build` or `pnpm build`.
