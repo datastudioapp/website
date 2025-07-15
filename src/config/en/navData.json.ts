@@ -12,11 +12,15 @@ import { type navItem } from "../types/configDataTypes";
 
 // note: 1 level of dropdown is supported
 const navConfig: navItem[] = [
-	/*
 	{
-		text: "Overview",
-		link: "/overview",
+		text: "Why opendata.studio?",
+		link: "/why",
 	},
+	{
+		text: "About",
+		link: "/about",
+	},
+	/*
 
 	// mega menu
 	// {
