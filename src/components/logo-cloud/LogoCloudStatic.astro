@@ -7,6 +7,7 @@
  */
 
 import { Image } from "astro:assets";
+
 import unsw from "@images/supporters/unsw.svg";
 import rna from "@images/supporters/rna.svg";
 import csiro from "@images/supporters/csiro.svg";
@@ -14,23 +15,24 @@ import csiro from "@images/supporters/csiro.svg";
 
 <section id="logo-cloud-static" class="flex items-end justify-center py-16 md:py-20">
 	<div class="site-container">
-		<div class="mx-auto max-w-xl" data-aos="fade-up">
-			<div class="flex justify-center">
-				<h2 class="text-muted-foreground inline">opendata.studio is supported by</h2>
-			</div>
-		</div>
 		<div class="mx-auto mt-10 max-w-5xl" data-aos="fade-up" data-aos-delay="0.15">
 			<div class="text-foreground grid w-full grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
 				<div class="flex px-8">
-					<Image src={unsw} class="mx-auto h-15 w-auto" aria-label="logo" alt="UNSW" />
+          <a href="https://www.unsw.edu.au/">
+					  <Image src={unsw} class="mx-auto h-15 w-auto" aria-label="logo" alt="UNSW" />
+          </a>
 				</div>
 
 				<div class="flex px-8">
-					<Image src={rna} class="mx-auto h-10 w-auto" aria-label="logo" alt="UNSW RNA Institute"/>
+          <a href="https://www.unsw.edu.au/institutes/rna">
+            <Image src={rna} class="mx-auto h-10 w-auto" aria-label="logo" alt="UNSW RNA Institute"/>
+          </a>
 				</div>
 
 				<div class="flex px-8">
-					<Image src={csiro} class="mx-auto h-10 w-auto" aria-label="logo" alt="CSIRO ON Innovation Program"/>
+          <a href="https://www.csiro.au/en/work-with-us/funding-programs/innovation-programs">
+            <Image src={csiro} class="mx-auto h-10 w-auto" aria-label="logo" alt="CSIRO ON Innovation Program"/>
+          </a>
 				</div>
 			</div>
 		</div>
