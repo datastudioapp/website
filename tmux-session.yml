@@ -1,4 +1,4 @@
-session_name: opendatastudio-website
+session_name: datastudio-website
 windows:
   - window_name: utils
     layout: even-horizontal
