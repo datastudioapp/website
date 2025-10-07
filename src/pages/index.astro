@@ -116,6 +116,30 @@ var title = `${SITE_TITLE}`;
         font-size: 1.25em;
       }
     }
+
+    .intro-text {
+      font-size: 1.25em;
+    }
+
+    .feature-list-title {
+      color: var(--brand-blue);
+      font-weight: bold;
+      margin-top: 1em;
+    }
+
+    .feature-list-content {
+      margin-top: 0.3em;
+      margin-left: 0;
+    }
+
+    .orange-accent {
+      color: #ed5344;
+    }
+
+    .feature-list {
+      margin-left: 2ch;
+      width: 50ch;
+    }
   }
 </style>
 
@@ -142,29 +166,53 @@ var title = `${SITE_TITLE}`;
           >
 
           <div class="intro-box">
-            <p>
-              <InlineBrand /> is a software toolbox that makes publishing reproducible
-              workflows simple.
+            <p class="intro-text">
+              <InlineBrand /> is a web application for collaborative, verifiable
+              data analysis. It gives teams the tools to build trusted, reusable
+              and extendable data workflows.
             </p>
-            <p>
-              We provide an open-source standard that captures the entire data
-              workflow—from analysis to visualisation—in a fully reproducible
-              datakit, built on the <a href="https://frictionlessdata.io"
-                >Frictionless Data</a
-              > specification.
-            </p>
-            <p>
-              Datakits can be published as interactive web applications, or
-              embedded as individual components in other web pages, making it
-              simple to share data and analysis while maintaining
-              reproducibility and provenance.
-            </p>
+            <dl class="feature-list">
+              <dt class="feature-list-title">
+                <i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; End-to-end
+                verification
+              </dt>
+              <dd class="feature-list-content">
+                Complete data analysis history is captured automatically.
+                Analyses are instantly reproducible and verifiable, even when
+                shared.
+              </dd>
+              <dt class="feature-list-title">
+                <i class="fa-solid fa-share-nodes"></i>&nbsp;&nbsp; Easy
+                collaboration
+              </dt>
+              <dd class="feature-list-content">
+                Browser-based interface allows for easy collaboration and
+                sharing of data analysis internally and externally.
+              </dd>
+              <dt class="feature-list-title">
+                <i class="fa-solid fa-universal-access"></i>&nbsp;&nbsp;
+                User-friendly
+              </dt>
+              <dd class="feature-list-content">
+                Easy to install and use with no complex installation or coding
+                knowledge required, improving user productivity.
+              </dd>
+              <dt class="feature-list-title">
+                <i class="fa-solid fa-shield-halved"></i>&nbsp;&nbsp; Data
+                sovereignty
+              </dt>
+              <dd class="feature-list-content">
+                All processing occurs in the browser or on a cloud provider of
+                your choice, leveraging your existing storage solutions.
+                DataStudio never has access to your data.
+              </dd>
+            </dl>
           </div>
 
           <div class="link-tiles">
             <a href="https://docs.datastudioapp.com/intro/intro/">
               <h2><i class="fa-solid fa-book"></i> Documentation&nbsp;→</h2>
-              <p>Get started with datakits</p>
+              <p>Get started with DataStudio CLI</p>
             </a>
             <a href="/team">
               <h2><i class="fa-solid fa-people-group"></i> Team&nbsp;→</h2>
