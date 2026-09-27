@@ -1,181 +1,172 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-
-import InlineBrand from "../components/branding/InlineBrand.astro";
-import Brand from "../components/branding/Brand.astro";
-
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-
-var title = `${SITE_TITLE}`;
+const title = "The DataStudio project";
+const description = "Declarative data analysis for the web";
+const canonicalURL = new URL("/", Astro.site);
 ---
 
-<style lang="scss">
-  @use "../styles/mixins/breakpoints";
-
-  .fa-solid {
-    color: #212d49;
-  }
-
-  .layout-container {
-    main {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-
-      section.introduction {
-        min-height: 75vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        container-type: inline-size;
-
-        .intro-box {
-          max-width: 80ch;
-        }
-
-        .link-tiles {
-          display: grid;
-          max-width: 550px;
-          margin-top: 2em;
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-
-          @container (max-width: 1120px) {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-          }
-
-          column-gap: 2ch;
-          row-gap: 2.25em;
-
-          h2 {
-            font-weight: normal;
-            font-size: 1.25em;
-            font-variation-settings:
-              "opsz" 14,
-              "wght" 375;
-          }
-
-          p {
-            margin-bottom: 0;
-          }
-
-          a {
-            color: black;
-            text-decoration: none;
-            background-color: white;
-            border: 1px solid #ddd;
-            padding: 0.5em 2ch;
-            border-radius: 0.4em;
-            height: 100%;
-
-            &:hover {
-              color: firebrick;
-              border: 1px solid firebrick;
-              .fa-solid,
-              strong {
-                color: firebrick;
-              }
-            }
-          }
-
-          @container (max-width: 600px) {
-            grid-template-columns: repeat(1, minmax(0, 1fr));
-            row-gap: 1em;
-            h2 {
-              font-size: 1.25em;
-            }
-            a {
-              padding: 0 1ch;
-            }
-            p {
-              margin-bottom: 1.25em;
-            }
-          }
-        }
-      }
-    }
-
-    .title-byline {
-      font-family: "Inter";
-      font-variation-settings:
-        "opsz" 14,
-        "wght" 500;
-      font-size: 1.5em;
-      display: block;
-    }
-
-    @media (max-width: 445px) {
-      .datastudio-branding {
-        font-size: 0.8em;
-        margin: 0;
-        margin-bottom: 1em;
-      }
-
-      .title-byline {
-        font-size: 1.25em;
-      }
-    }
-  }
-</style>
-
+<!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title={title} description={SITE_DESCRIPTION} />
-    <link href="/assets/fonts/FontAwesome/css/all.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta name="twitter:card" content="summary" />
   </head>
-
-  <body class="datastudio">
-    <div class="layout-container">
-      <!--
-      <div class="site-header-background"></div>
-      <div class="site-header">
-        <Header title={SITE_TITLE} />
-        </div>
-      -->
-
-      <main>
-        <section class="introduction">
-          <Brand />
-
-          <span class="title-byline">Analysis software for humans</span>
-
-          <div class="intro-box">
-            <p>
-              DataStudio aims to make scientific analysis easier to understand, share, and trust.
-            </p>
-
-            <p>
-            It is a web-based platform that helps researchers turn complex analysis workflows into simple, interactive applications.
-            </p>
-
-            <p>
-              DataStudio keeps the data, method, settings, results, and visualisations together, so the full analysis can be easily reviewed, repeated, and shared.
-            </p>
-          </div>
-
-          <div class="link-tiles">
-            <a href="https://docs.datastudioapp.com/intro/intro/">
-              <h2><i class="fa-solid fa-book"></i> Documentation&nbsp;→</h2>
-              <p>Technical documentation</p>
-            </a>
-            <a href="/team">
-              <h2><i class="fa-solid fa-people-group"></i> Team&nbsp;→</h2>
-              <p>About the <InlineBrand /> team</p>
-            </a>
-          </div>
-        </section>
-      </main>
-
-      <!--
-      <div class="site-footer-background"></div>
-      <div class="site-footer">
-        <Footer />
+  <body>
+    <main>
+      <div class="brand">
+        <img src="/logo.svg" alt="" width="56" height="56" />
+        <h1>DataStudio</h1>
       </div>
-      -->
-    </div>
-    <script
-      src="https://kit.fontawesome.com/d5670506c3.js"
-      crossorigin="anonymous"></script>
+      <p class="byline">Analysis software for humans</p>
+
+      <div class="intro">
+        <p>
+          DataStudio aims to make scientific analysis easier to understand,
+          share, and trust.
+        </p>
+        <p>
+          It is a web-based platform that helps researchers turn complex
+          analysis workflows into simple, interactive applications.
+        </p>
+        <p>
+          DataStudio keeps the data, method, settings, results, and
+          visualisations together, so the full analysis can be easily reviewed,
+          repeated, and shared.
+        </p>
+      </div>
+
+      <a
+        class="documentation"
+        href="https://docs.datastudioapp.com/intro/intro/"
+      >
+        <h2>
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M12 5v15M12 5C9 3 5 3 2 4v15c3-1 7-1 10 1 3-2 7-2 10-1V4c-3-1-7-1-10 1Z" />
+          </svg>
+          Documentation <span aria-hidden="true">→</span>
+        </h2>
+        <p>Technical documentation</p>
+      </a>
+    </main>
   </body>
 </html>
+
+<style is:global>
+  @font-face {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("/inter.ttf") format("truetype");
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  :root {
+    font-family: Inter, system-ui, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    --brand-blue: #212d49;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  a {
+    color: var(--brand-blue);
+  }
+
+  a:hover,
+  a:focus-visible {
+    color: firebrick;
+  }
+
+  a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: min(120ch, 100% - 4rem);
+    min-height: 75vh;
+    margin: 2rem auto;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    color: var(--brand-blue);
+    font-size: clamp(2.25rem, 8vw, 3rem);
+  }
+
+  .brand img {
+    width: 1.333em;
+    height: 1.333em;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: inherit;
+    font-variant-ligatures: discretionary-ligatures;
+    font-variation-settings: "opsz" 32, "wght" 580;
+  }
+
+  .byline {
+    margin: 0;
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
+    font-weight: 500;
+  }
+
+  .intro {
+    max-width: 80ch;
+  }
+
+  .documentation {
+    max-width: 100%;
+    margin-top: 2rem;
+    padding: 0.5rem 2ch;
+    border: 1px solid #ddd;
+    border-radius: 0.4rem;
+    text-decoration: none;
+  }
+
+  .documentation:hover,
+  .documentation:focus-visible {
+    border-color: currentColor;
+  }
+
+  h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5ch;
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+</style>

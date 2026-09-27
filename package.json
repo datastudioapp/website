@@ -1,29 +1,19 @@
 {
   "name": "datastudio-website",
   "type": "module",
-  "version": "0.0.1",
-  "packageManager": "yarn@4.14.1",
+  "private": true,
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "prepare": "husky install"
+    "preview": "astro preview"
   },
   "dependencies": {
-    "@astrojs/mdx": "4.3.0",
-    "@astrojs/rss": "4.0.12",
-    "@astrojs/sitemap": "3.4.1",
-    "astro": "5.11.0",
-    "normalize.css": "^8.0.1",
-    "sass": "^1.68.0"
+    "astro": "7.3.5"
   },
   "devDependencies": {
-    "husky": "^8.0.0",
-    "prettier": "^3.2.4",
-    "prettier-plugin-astro": "^0.12.3",
-    "pretty-quick": "^4.0.0",
     "wrangler": "^4.38.0"
   }
 }
