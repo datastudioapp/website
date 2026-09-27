@@ -1,6 +1,6 @@
 ---
-const title = "The DataStudio project";
-const description = "Declarative data analysis for the web";
+const title = "DataStudio — Scientific analysis in your browser";
+const description = "DataStudio lets researchers run and share scientific analyses reproducibly.";
 const canonicalURL = new URL("/", Astro.site);
 ---
 
@@ -9,6 +9,7 @@ const canonicalURL = new URL("/", Astro.site);
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f9f7" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonicalURL} />
     <title>{title}</title>
@@ -20,52 +21,28 @@ const canonicalURL = new URL("/", Astro.site);
     <meta name="twitter:card" content="summary" />
   </head>
   <body>
-    <main>
-      <div class="brand">
-        <img src="/logo.svg" alt="" width="56" height="56" />
-        <h1>DataStudio</h1>
-      </div>
-      <p class="byline">Analysis software for humans</p>
-
-      <div class="intro">
-        <p>
-          DataStudio aims to make scientific analysis easier to understand,
-          share, and trust.
-        </p>
-        <p>
-          It is a web-based platform that helps researchers turn complex
-          analysis workflows into simple, interactive applications.
-        </p>
-        <p>
-          DataStudio keeps the data, method, settings, results, and
-          visualisations together, so the full analysis can be easily reviewed,
-          repeated, and shared.
-        </p>
-      </div>
-
-      <a
-        class="documentation"
-        href="https://docs.datastudioapp.com/intro/intro/"
-      >
-        <h2>
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-            focusable="false"
-          >
-            <path d="M12 5v15M12 5C9 3 5 3 2 4v15c3-1 7-1 10 1 3-2 7-2 10-1V4c-3-1-7-1-10 1Z" />
-          </svg>
-          Documentation <span aria-hidden="true">→</span>
-        </h2>
-        <p>Technical documentation</p>
+    <header>
+      <a class="brand" href="/" aria-label="DataStudio home">
+        <img src="/logo.svg" alt="" width="36" height="36" />
+        <span>DataStudio</span>
       </a>
+      <a class="contact" href="mailto:hello@datastudioapp.com">
+        Contact us <span aria-hidden="true">↗</span>
+      </a>
+    </header>
+
+    <main>
+      <h1>Scientific analysis<br />in your browser.</h1>
+      <p class="description">{description}</p>
+      <div class="actions">
+        <a class="launch" href="https://app.datastudioapp.com">
+          Launch app
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M5 12h14m-6-6 6 6-6 6" />
+          </svg>
+        </a>
+        <span class="status">Alpha testing</span>
+      </div>
     </main>
   </body>
 </html>
@@ -85,88 +62,123 @@ const canonicalURL = new URL("/", Astro.site);
 
   :root {
     font-family: Inter, system-ui, sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    --brand-blue: #212d49;
+    color: #212d49;
+    background: #f8f9f7;
+    font-synthesis: none;
   }
 
   body {
-    margin: 0;
+    width: min(1040px, 100% - 3rem);
+    margin: auto;
   }
 
   a {
-    color: var(--brand-blue);
-  }
-
-  a:hover,
-  a:focus-visible {
-    color: firebrick;
+    color: inherit;
+    text-decoration: none;
   }
 
   a:focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 4px;
+    outline: 2px solid #212d49;
+    outline-offset: 6px;
   }
 
-  main {
+  header {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: min(120ch, 100% - 4rem);
-    min-height: 75vh;
-    margin: 2rem auto;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-block: 2rem;
+    border-bottom: 1px solid #dce0e2;
   }
 
   .brand {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    margin: 1rem 0;
-    color: var(--brand-blue);
-    font-size: clamp(2.25rem, 8vw, 3rem);
+    gap: 0.4rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.04em;
   }
 
-  .brand img {
-    width: 1.333em;
-    height: 1.333em;
+  .contact {
+    font-size: 0.875rem;
+  }
+
+  .contact span {
+    margin-left: 0.35rem;
+  }
+
+  .contact:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  main {
+    padding-block: clamp(5rem, 12vh, 9rem);
   }
 
   h1 {
     margin: 0;
-    font-size: inherit;
-    font-variant-ligatures: discretionary-ligatures;
-    font-variation-settings: "opsz" 32, "wght" 580;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.055em;
+    text-wrap: balance;
   }
 
-  .byline {
-    margin: 0;
-    font-size: clamp(1.25rem, 4vw, 1.5rem);
+  .description {
+    max-width: 56ch;
+    margin: 2rem 0 2.5rem;
+    color: #4e5868;
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    line-height: 1.7;
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .launch {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid #212d49;
+    border-radius: 6px;
+    background: #212d49;
+    color: #fff;
+    font-size: 0.9375rem;
     font-weight: 500;
   }
 
-  .intro {
-    max-width: 80ch;
+  .launch:hover {
+    background: #344361;
   }
 
-  .documentation {
-    max-width: 100%;
-    margin-top: 2rem;
-    padding: 0.5rem 2ch;
-    border: 1px solid #ddd;
-    border-radius: 0.4rem;
-    text-decoration: none;
-  }
-
-  .documentation:hover,
-  .documentation:focus-visible {
-    border-color: currentColor;
-  }
-
-  h2 {
-    display: flex;
+  .status {
+    display: inline-flex;
     align-items: center;
-    gap: 0.5ch;
-    font-size: 1.25rem;
-    font-weight: 400;
+    gap: 0.5rem;
+    color: #586271;
+    font-size: 0.8125rem;
+  }
+
+  .status::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #bd5949;
+  }
+
+  @media (max-width: 420px) {
+    header {
+      padding-block: 1.5rem;
+    }
   }
 </style>
