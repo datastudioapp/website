@@ -44,6 +44,10 @@ const canonicalURL = new URL("/", Astro.site);
         <span class="status">Alpha testing</span>
       </div>
     </main>
+
+    <footer>
+      Provided by the <a href="https://www.unsw.edu.au/institutes/rna">UNSW RNA Institute</a>
+    </footer>
   </body>
 </html>
 
@@ -68,7 +72,10 @@ const canonicalURL = new URL("/", Astro.site);
   }
 
   body {
+    display: flex;
+    flex-direction: column;
     width: min(1040px, 100% - 3rem);
+    min-height: 100svh;
     margin: auto;
   }
 
@@ -115,6 +122,7 @@ const canonicalURL = new URL("/", Astro.site);
   }
 
   main {
+    flex: 1;
     padding-block: clamp(5rem, 12vh, 9rem);
   }
 
@@ -174,6 +182,24 @@ const canonicalURL = new URL("/", Astro.site);
     height: 6px;
     border-radius: 50%;
     background: #bd5949;
+  }
+
+  footer {
+    padding-block: 2rem;
+    border-top: 1px solid #dce0e2;
+    color: #586271;
+    font-size: 0.8125rem;
+  }
+
+  footer a {
+    color: #212d49;
+    text-decoration: underline;
+    text-decoration-color: #c3c8cd;
+    text-underline-offset: 3px;
+  }
+
+  footer a:hover {
+    text-decoration-color: currentColor;
   }
 
   @media (max-width: 420px) {
